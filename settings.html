@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | Settings</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="sidebar-brand">
+
+        <div class="brand-symbol">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>VYOMIX</h2>
+
+            <span>
+                COMPONENT INTELLIGENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <!-- DASHBOARD -->
+
+        <a href="dashboard.html"
+           class="nav-item">
+
+            <span>▦</span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <!-- NEW SCREENING -->
+
+        <a href="screening.html"
+           class="nav-item">
+
+            <span>＋</span>
+
+            <span>
+                New Screening
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE A -->
+
+        <a href="module-a.html"
+           class="nav-item">
+
+            <span>◉</span>
+
+            <span>
+                Module A
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE B -->
+
+        <a href="module-b.html"
+           class="nav-item">
+
+            <span>◇</span>
+
+            <span>
+                Module B
+            </span>
+
+        </a>
+
+
+
+        <!-- HISTORY -->
+
+        <a href="history.html"
+           class="nav-item">
+
+            <span>◷</span>
+
+            <span>
+                History
+            </span>
+
+        </a>
+
+
+
+        <!-- REPORTS -->
+
+        <a href="reports.html"
+           class="nav-item">
+
+            <span>▤</span>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+
+        <!-- SETTINGS -->
+
+        <a href="settings.html"
+           class="nav-item active">
+
+            <span>⚙</span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            <span>
+                System Online
+            </span>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button">
+
+            <span>↪</span>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <div>
+
+            <h1>
+                Settings
+            </h1>
+
+            <p>
+                Workspace Configuration
+            </p>
+
+        </div>
+
+
+
+        <!-- USER PROFILE -->
+
+        <div class="topbar-right">
+
+
+            <div class="user-profile">
+
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar">
+
+                    U
+
+                </div>
+
+
+                <div class="user-details">
+
+
+                    <strong id="userName">
+
+                        User
+
+                    </strong>
+
+
+                    <span id="userRole">
+
+                        Engineer
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         SETTINGS CONTENT
+    ================================================= -->
+
+    <section class="dashboard-content">
+
+
+
+        <!-- =================================================
+             PAGE INTRO
+        ================================================= -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-text">
+
+
+                <p class="welcome-label">
+
+                    WORKSPACE CONFIGURATION
+
+                </p>
+
+
+                <h2>
+
+                    Settings
+
+                </h2>
+
+
+                <p class="welcome-description">
+
+                    Manage your VYOMIX account information
+                    and application configuration.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACCOUNT INFORMATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        User Information
+
+                    </h3>
+
+
+                    <p>
+
+                        Your registered VYOMIX account details.
+
+                    </p>
+
+                </div>
+
+
+                <span>
+
+                    Account
+
+                </span>
+
+
+            </div>
+
+
+
+            <div class="module-metrics">
+
+
+                <!-- NAME -->
+
+                <div>
+
+
+                    <span>
+                        NAME
+                    </span>
+
+
+                    <strong id="settingsName">
+
+                        User
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- ROLE -->
+
+                <div>
+
+
+                    <span>
+                        ROLE
+                    </span>
+
+
+                    <strong id="settingsRole">
+
+                        Engineer
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div>
+
+
+                    <span>
+                        EMAIL
+                    </span>
+
+
+                    <strong id="settingsEmail">
+
+                        —
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SYSTEM CONFIGURATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        System Configuration
+
+                    </h3>
+
+
+                    <p>
+
+                        Current VYOMIX application status.
+
+                    </p>
+
+                </div>
+
+
+                <span>
+
+                    System
+
+                </span>
+
+
+            </div>
+
+
+
+            <div class="module-metrics">
+
+
+                <!-- SYSTEM STATUS -->
+
+                <div>
+
+
+                    <span>
+                        SYSTEM STATUS
+                    </span>
+
+
+                    <strong class="model-ready">
+
+                        ● ONLINE
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- BACKEND -->
+
+                <div>
+
+
+                    <span>
+                        BACKEND
+                    </span>
+
+
+                    <strong id="backendStatus">
+
+                        READY
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- DATA -->
+
+                <div>
+
+
+                    <span>
+                        DATA SOURCE
+                    </span>
+
+
+                    <strong>
+
+                        Burn-In Screening Data
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SCREENING CONFIGURATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Screening Configuration
+
+                    </h3>
+
+
+                    <p>
+
+                        VYOMIX screening pipeline configuration.
+
+                    </p>
+
+                </div>
+
+
+                <span>
+
+                    Analysis
+
+                </span>
+
+
+            </div>
+
+
+
+            <div class="module-metrics">
+
+
+                <!-- MODULE A -->
+
+                <div>
+
+
+                    <span>
+                        MODULE A
+                    </span>
+
+
+                    <strong>
+
+                        Dynamic Anomaly Detection
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- MODULE B -->
+
+                <div>
+
+
+                    <span>
+                        MODULE B
+                    </span>
+
+
+                    <strong>
+
+                        Time-Series Drift Prediction
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- SCREENING -->
+
+                <div>
+
+
+                    <span>
+                        FINAL DECISION
+                    </span>
+
+
+                    <strong>
+
+                        PASS / MONITOR / REJECT
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="empty-state">
+
+
+                <div class="empty-icon">
+
+                    ⚙
+
+                </div>
+
+
+                <h4>
+
+                    VYOMIX Configuration
+
+                </h4>
+
+
+                <p>
+
+                    Additional settings will be available
+                    as the backend screening system is integrated.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer>
+
+
+        <span>
+
+            © 2026 VYOMIX — Component Intelligence
+
+        </span>
+
+
+        <span>
+
+            AI-Driven Burn-In &amp; Screening System
+
+        </span>
+
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SETTINGS JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   LOAD USER INFORMATION
+===================================================== */
+
+const storedUser =
+    localStorage.getItem(
+        "vyomixUser"
+    );
+
+
+if (storedUser) {
+
+
+    try {
+
+
+        const user =
+            JSON.parse(
+                storedUser
+            );
+
+
+        const name =
+            user.name ||
+            "User";
+
+
+        const role =
+            user.role ||
+            "Engineer";
+
+
+        const email =
+            user.email ||
+            localStorage.getItem(
+                "vyomixEmail"
+            ) ||
+            "—";
+
+
+
+        /* TOPBAR USER */
+
+        const userName =
+            document.getElementById(
+                "userName"
+            );
+
+
+        if (userName) {
+
+            userName.textContent =
+                name;
+
+        }
+
+
+
+        const userRole =
+            document.getElementById(
+                "userRole"
+            );
+
+
+        if (userRole) {
+
+            userRole.textContent =
+                role;
+
+        }
+
+
+
+        const userAvatar =
+            document.getElementById(
+                "userAvatar"
+            );
+
+
+        if (
+            userAvatar &&
+            name.length > 0
+        ) {
+
+            userAvatar.textContent =
+                name
+                    .charAt(0)
+                    .toUpperCase();
+
+        }
+
+
+
+        /* SETTINGS INFORMATION */
+
+        const settingsName =
+            document.getElementById(
+                "settingsName"
+            );
+
+
+        if (settingsName) {
+
+            settingsName.textContent =
+                name;
+
+        }
+
+
+
+        const settingsRole =
+            document.getElementById(
+                "settingsRole"
+            );
+
+
+        if (settingsRole) {
+
+            settingsRole.textContent =
+                role;
+
+        }
+
+
+
+        const settingsEmail =
+            document.getElementById(
+                "settingsEmail"
+            );
+
+
+        if (settingsEmail) {
+
+            settingsEmail.textContent =
+                email;
+
+        }
+
+
+    }
+
+
+    catch (error) {
+
+        console.error(
+            "Unable to load user information.",
+            error
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+if (logoutButton) {
+
+
+    logoutButton.addEventListener(
+        "click",
+        function() {
+
+
+            localStorage.removeItem(
+                "vyomixUser"
+            );
+
+
+            localStorage.removeItem(
+                "vyomixEmail"
+            );
+
+
+            window.location.href =
+                "index.html";
+
+
+        }
+    );
+
+
+}
+
+
+</script>
+
+<script>
+
+const backendStatus = document.getElementById("backendStatus");
+
+Promise.all([
+    fetch("http://127.0.0.1:8000/"),
+    fetch("http://127.0.0.1:8003/health")
+])
+    .then(function (responses) {
+        if (responses.every(function (response) { return response.ok; })) {
+            backendStatus.textContent = "ONLINE";
+            backendStatus.classList.add("model-ready");
+            return;
+        }
+        throw new Error("A VYOMIX service is unavailable.");
+    })
+    .catch(function () {
+        backendStatus.textContent = "OFFLINE";
+        backendStatus.classList.remove("model-ready");
+    });
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

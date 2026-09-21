@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | New Screening</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="sidebar-brand">
+
+        <div class="brand-symbol">
+            🚀
+        </div>
+
+        <div>
+            <h2>VYOMIX</h2>
+
+            <span>
+                COMPONENT INTELLIGENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <!-- DASHBOARD -->
+
+        <a href="dashboard.html"
+           class="nav-item">
+
+            <span>▦</span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <!-- NEW SCREENING -->
+
+        <a href="screening.html"
+           class="nav-item active">
+
+            <span>＋</span>
+
+            <span>
+                New Screening
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE A -->
+
+        <a href="module-a.html"
+           class="nav-item">
+
+            <span>◉</span>
+
+            <span>
+                Module A
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE B -->
+
+        <a href="module-b.html"
+           class="nav-item">
+
+            <span>◇</span>
+
+            <span>
+                Module B
+            </span>
+
+        </a>
+
+
+
+        <!-- HISTORY -->
+
+        <a href="history.html"
+           class="nav-item">
+
+            <span>◷</span>
+
+            <span>
+                History
+            </span>
+
+        </a>
+
+
+
+        <!-- REPORTS -->
+
+        <a href="reports.html"
+           class="nav-item">
+
+            <span>▤</span>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+
+        <!-- SETTINGS -->
+
+        <a href="settings.html"
+           class="nav-item">
+
+            <span>⚙</span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            <span>
+                System Online
+            </span>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button">
+
+            <span>↪</span>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <div>
+
+            <h1>
+                New Screening
+            </h1>
+
+            <p>
+                Component Screening Workspace
+            </p>
+
+        </div>
+
+
+
+        <!-- USER PROFILE -->
+
+        <div class="topbar-right">
+
+
+            <div class="user-profile">
+
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar">
+
+                    U
+
+                </div>
+
+
+                <div class="user-details">
+
+
+                    <strong id="userName">
+
+                        User
+
+                    </strong>
+
+
+                    <span id="userRole">
+
+                        Engineer
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE CONTENT
+    ================================================= -->
+
+    <section class="dashboard-content">
+
+
+
+        <!-- =================================================
+             INTRO
+        ================================================= -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-text">
+
+
+                <p class="welcome-label">
+
+                    NEW SCREENING
+
+                </p>
+
+
+                <h2>
+
+                    Component Screening
+
+                </h2>
+
+
+                <p class="welcome-description">
+
+                    Upload burn-in measurement data to
+                    validate and analyze component behavior.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             UPLOAD CARD
+        ================================================= -->
+
+        <section class="module-upload-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Upload Screening Data
+
+                    </h3>
+
+
+                    <p>
+
+                        Upload a CSV file containing
+                        burn-in measurements.
+
+                    </p>
+
+                </div>
+
+
+                <span id="uploadStatus">
+
+                    Ready
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- DROP AREA -->
+
+            <div
+                id="dropArea"
+                class="module-drop-area">
+
+
+                <div class="upload-icon">
+
+                    📁
+
+                </div>
+
+
+                <h3>
+
+                    Upload Component Data
+
+                </h3>
+
+
+                <p>
+
+                    Drag &amp; drop your CSV file here
+
+                </p>
+
+                <span>
+                    or
+                </span>
+
+
+                <label
+                    for="screeningFile"
+                    class="choose-file-button">
+
+                    Choose CSV File
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="screeningFile"
+                    accept=".csv"
+                    hidden>
+
+
+                <div
+                    id="selectedFile"
+                    class="selected-file">
+
+                    No file selected
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SELECTED FILE
+            ================================================= -->
+
+            <div
+                id="selectedFileBox"
+                class="screening-selected-file selected-file"
+                style="display: none;">
+
+
+                <div class="file-icon">
+
+                    CSV
+
+                </div>
+
+
+                <div class="selected-file-details">
+
+
+                    <strong id="selectedFileName">
+
+                        file.csv
+
+                    </strong>
+
+
+                    <span id="selectedFileSize">
+
+                        0 KB
+
+                    </span>
+
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="removeFile"
+                    class="remove-file-button">
+
+                    ✕
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILE INFORMATION
+            ================================================= -->
+
+            <div
+                id="screeningFileInfo"
+                class="screening-file-info"
+                style="display: none;">
+
+
+                <div class="screening-info-box">
+
+
+                    <span>
+                        File Name
+                    </span>
+
+
+                    <strong id="infoFileName">
+
+                        —
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="screening-info-box">
+
+
+                    <span>
+                        File Size
+                    </span>
+
+
+                    <strong id="infoFileSize">
+
+                        —
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="screening-info-box">
+
+
+                    <span>
+                        Components
+                    </span>
+
+
+                    <strong id="componentCount">
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="screening-info-box">
+
+
+                    <span>
+                        Status
+                    </span>
+
+
+                    <strong id="validationStatus">
+
+                        Waiting
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+            <div id="validationSummary" class="screening-file-info" style="display: none;">
+                <div class="screening-info-box">
+                    <span>Screening ID</span>
+                    <strong id="validationScreeningId">Pending</strong>
+                </div>
+                <div class="screening-info-box">
+                    <span>Required Columns</span>
+                    <strong id="validationColumns">—</strong>
+                </div>
+                <div class="screening-info-box">
+                    <span>Missing Values</span>
+                    <strong id="validationMissing">0</strong>
+                </div>
+                <div class="screening-info-box">
+                    <span>Invalid Values</span>
+                    <strong id="validationInvalid">0</strong>
+                </div>
+                <div class="screening-info-box">
+                    <span>Duplicate IDs</span>
+                    <strong id="validationDuplicates">0</strong>
+                </div>
+                <div class="screening-info-box">
+                    <span>Lot / Batch</span>
+                    <strong id="validationLot">Not detected</strong>
+                </div>
+                <div class="screening-info-box">
+                    <span>Data Format</span>
+                    <strong id="validationFormat">CSV</strong>
+                </div>
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="screeningMessage"
+                class="screening-message">
+
+            </div>
+
+
+
+            <!-- START -->
+
+            <button
+                type="button"
+                id="startScreening"
+                class="start-screening-button"
+                disabled>
+
+                START SCREENING →
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SCREENING PIPELINE
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Screening Process
+
+                    </h3>
+
+
+                    <p>
+
+                        VYOMIX processes the uploaded data
+                        through the screening pipeline.
+
+                    </p>
+
+                </div>
+
+
+                <span>
+                    Pipeline
+                </span>
+
+
+            </div>
+
+
+
+            <div class="process-steps">
+
+
+                <!-- STEP 1 -->
+
+                <div
+                    id="stepValidation"
+                    class="process-step">
+
+
+                    <div class="process-number">
+
+                        01
+
+                    </div>
+
+
+                    <div class="process-content">
+
+
+                        <h3>
+
+                            Data Validation
+
+                        </h3>
+
+
+                        <p>
+
+                            Validate uploaded measurement data.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="process-state">
+
+                        ○
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- STEP 2 -->
+
+                <div
+                    id="stepModuleA"
+                    class="process-step">
+
+
+                    <div class="process-number">
+
+                        02
+
+                    </div>
+
+
+                    <div class="process-content">
+
+
+                        <h3>
+
+                            Module A
+
+                        </h3>
+
+
+                        <p>
+
+                            Dynamic anomaly detection.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="process-state">
+
+                        ○
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- STEP 3 -->
+
+                <div
+                    id="stepModuleB"
+                    class="process-step">
+
+
+                    <div class="process-number">
+
+                        03
+
+                    </div>
+
+
+                    <div class="process-content">
+
+
+                        <h3>
+
+                            Module B
+
+                        </h3>
+
+
+                        <p>
+
+                            Time-series drift prediction.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="process-state">
+
+                        ○
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- STEP 4 -->
+
+                <div
+                    id="stepFinal"
+                    class="process-step">
+
+
+                    <div class="process-number">
+
+                        04
+
+                    </div>
+
+
+                    <div class="process-content">
+
+
+                        <h3>
+
+                            Final Classification
+
+                        </h3>
+
+
+                        <p>
+
+                            Generate final screening decision.
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="process-state">
+
+                        ○
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULTS
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Screening Results
+
+                    </h3>
+
+
+                    <p>
+
+                        Results will appear after the
+                        backend screening pipeline completes.
+
+                    </p>
+
+                </div>
+
+
+                <span id="resultStatus">
+
+                    Awaiting Analysis
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- SUMMARY -->
+
+            <div class="screening-summary-grid">
+
+
+                <div class="screening-summary normal">
+
+
+                    <span>
+                        TOTAL
+                    </span>
+
+
+                    <strong id="totalScreened">
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="screening-summary pass">
+
+
+                    <span>
+                        ACCEPTED / PASS
+                    </span>
+
+
+                    <strong id="passedCount">
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="screening-summary monitor">
+
+
+                    <span>
+                        REVIEW / AT-RISK
+                    </span>
+
+
+                    <strong id="monitorCount">
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div class="screening-summary reject">
+
+
+                    <span>
+                        REJECTED / FAIL
+                    </span>
+
+
+                    <strong id="rejectedCount">
+
+                        0
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                id="screeningEmpty"
+                class="empty-state">
+
+
+                <div class="empty-icon">
+
+                    ◉
+
+                </div>
+
+
+                <h4>
+
+                    No Screening Results
+
+                </h4>
+
+
+                <p>
+
+                    Upload a component CSV and connect
+                    the screening pipeline to view results.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- TABLE -->
+
+            <div
+                id="screeningResultsTable"
+                class="screening-table-container"
+                style="display: none;">
+
+
+                <table>
+
+
+                    <thead>
+
+
+                        <tr>
+
+
+                            <th>
+                                Component ID
+                            </th>
+
+
+                            <th>
+                                Module A
+                            </th>
+
+
+                            <th>
+                                Predicted 168h
+                            </th>
+
+
+                            <th>
+                                Drift
+                            </th>
+
+
+                            <th>
+                                Final Status
+                            </th>
+                            <th>
+                                Reason
+                            </th>
+
+
+                        </tr>
+
+
+                    </thead>
+
+
+
+                    <tbody id="resultsBody">
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPLANATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Screening Explanation
+
+                    </h3>
+
+
+                    <p>
+
+                        Component-level model reasoning
+                        will appear after analysis.
+
+                    </p>
+
+                </div>
+
+
+                <span>
+
+                    Explainability
+
+                </span>
+
+
+            </div>
+
+
+
+            <div
+                id="screeningExplanationEmpty"
+                class="empty-state">
+
+
+                <div class="empty-icon">
+
+                    ?
+
+                </div>
+
+
+                <h4>
+
+                    Explanation Not Available
+
+                </h4>
+
+
+                <p>
+
+                    Complete a screening to view
+                    component-level explanations.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div
+                id="screeningExplanation"
+                style="display: none;">
+
+
+            </div>
+
+            <div class="explanation-box" id="finalScreeningSummary" style="display: none;">
+                <div class="explanation-title">FINAL SCREENING SUMMARY</div>
+                <p id="finalScreeningCounts"></p>
+                <p id="finalScreeningIds"></p>
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer>
+
+
+        <span>
+
+            © 2026 VYOMIX — Component Intelligence
+
+        </span>
+
+
+        <span>
+
+            AI-Driven Burn-In &amp; Screening System
+
+        </span>
+
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SCREENING JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const fileInput =
+    document.getElementById(
+        "screeningFile"
+    );
+
+
+const dropArea =
+    document.getElementById(
+                    <div id="finalDecisionSummary" style="display: none;">
+                        <span>Final Decision:</span>
+                        <strong id="finalDecision">Pending</strong>
+                    </div>
+        "dropArea"
+    );
+
+
+const selectedFileBox =
+    document.getElementById(
+        "selectedFileBox"
+    );
+
+
+const selectedFileName =
+    document.getElementById(
+        "selectedFileName"
+    );
+
+
+const selectedFileSize =
+    document.getElementById(
+        "selectedFileSize"
+    );
+
+
+const removeFile =
+    document.getElementById(
+        "removeFile"
+    );
+
+
+const startScreening =
+    document.getElementById(
+        "startScreening"
+    );
+
+
+const screeningMessage =
+    document.getElementById(
+        "screeningMessage"
+    );
+
+
+const screeningFileInfo =
+    document.getElementById(
+        "screeningFileInfo"
+    );
+
+
+const infoFileName =
+    document.getElementById(
+        "infoFileName"
+    );
+
+
+const infoFileSize =
+    document.getElementById(
+        "infoFileSize"
+    );
+
+
+const componentCount =
+    document.getElementById(
+        "componentCount"
+    );
+
+
+const validationStatus =
+    document.getElementById(
+        "validationStatus"
+    );
+
+const validationSummary = document.getElementById("validationSummary");
+const validationScreeningId = document.getElementById("validationScreeningId");
+const validationColumns = document.getElementById("validationColumns");
+const validationMissing = document.getElementById("validationMissing");
+const validationInvalid = document.getElementById("validationInvalid");
+const validationDuplicates = document.getElementById("validationDuplicates");
+const validationLot = document.getElementById("validationLot");
+const validationFormat = document.getElementById("validationFormat");
+
+
+const uploadStatus =
+    document.getElementById(
+        "uploadStatus"
+    );
+
+let selectedFile = null;
+let validationDetails = null;
+let screeningId = null;
+
+
+
+/* =====================================================
+   FORMAT FILE SIZE
+===================================================== */
+
+function formatFileSize(bytes) {
+
+
+    if (bytes < 1024) {
+
+        return bytes + " B";
+
+    }
+
+
+    if (bytes < 1024 * 1024) {
+
+        return (
+            (bytes / 1024).toFixed(1)
+            + " KB"
+        );
+
+    }
+
+
+    return (
+        (bytes / (1024 * 1024)).toFixed(2)
+        + " MB"
+    );
+
+}
+
+
+
+/* =====================================================
+   SHOW MESSAGE
+===================================================== */
+
+function showMessage(
+    message,
+    type = ""
+) {
+
+
+    if (!screeningMessage) {
+        return;
+    }
+
+
+    screeningMessage.textContent =
+        message;
+
+
+    screeningMessage.className =
+        "screening-message";
+
+
+    if (type) {
+
+        screeningMessage.classList.add(
+            type
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   COUNT COMPONENTS
+===================================================== */
+
+function countComponents(csvText) {
+
+
+    const lines =
+        csvText
+            .trim()
+            .split(/\r?\n/);
+
+
+    if (lines.length <= 1) {
+
+        return 0;
+
+    }
+
+
+    const header =
+        lines[0]
+            .split(",")
+            .map(
+                column =>
+                    column
+                        .trim()
+                        .toLowerCase()
+            );
+
+
+
+    const possibleColumns = [
+
+        "part_id",
+
+        "component_id",
+
+        "component",
+
+        "id"
+
+    ];
+
+
+
+    let idIndex = -1;
+
+
+
+    for (
+        const columnName
+        of possibleColumns
+    ) {
+
+
+        idIndex =
+            header.indexOf(
+                columnName
+            );
+
+
+        if (idIndex !== -1) {
+
+            break;
+
+        }
+
+    }
+
+
+
+    /*
+
+        If a component ID column exists,
+        count UNIQUE components.
+
+    */
+
+    if (idIndex !== -1) {
+
+
+        const ids =
+            new Set();
+
+
+
+        for (
+            let i = 1;
+            i < lines.length;
+            i++
+        ) {
+
+
+            const row =
+                lines[i].split(",");
+
+
+            if (
+                row[idIndex] &&
+                row[idIndex].trim()
+            ) {
+
+
+                ids.add(
+                    row[idIndex].trim()
+                );
+
+            }
+
+        }
+
+
+        return ids.size;
+
+    }
+
+
+
+    /*
+
+        No component ID column found.
+
+        Count data rows.
+
+    */
+
+    return lines.length - 1;
+
+}
+
+function inspectCSV(csvText) {
+    const lines = csvText.trim().split(/\r?\n/).filter(Boolean);
+    const headers = (lines[0] || "").split(",").map(value => value.trim());
+    const required = [
+        "part_id",
+        "IGSS_uA_0h", "IGSS_uA_24h",
+        "IDSS_uA_0h", "IDSS_uA_24h",
+        "VGSth_V_0h", "VGSth_V_24h",
+        "RDSon_mOhm_0h", "RDSon_mOhm_24h"
+    ];
+    const detected = required.filter(column => headers.includes(column));
+    const missingColumns = required.filter(column => !headers.includes(column));
+    const idIndex = headers.indexOf("part_id");
+    const numericIndexes = required.slice(1).map(column => headers.indexOf(column));
+    const ids = [];
+    let missingValues = 0;
+    let invalidValues = 0;
+
+    lines.slice(1).forEach(line => {
+        const values = line.split(",").map(value => value.trim());
+        if (idIndex === -1 || !values[idIndex]) {
+            missingValues++;
+        } else {
+            ids.push(values[idIndex]);
+        }
+        numericIndexes.forEach(index => {
+            if (index === -1 || !values[index]) {
+                missingValues++;
+            } else if (!Number.isFinite(Number(values[index]))) {
+                invalidValues++;
+            }
+        });
+    });
+
+    const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
+    const lotColumn = headers.find(column => /lot|batch/i.test(column));
+    const uniqueLotValues = lotColumn
+        ? [...new Set(lines.slice(1).map(line => line.split(",")[headers.indexOf(lotColumn)]).filter(Boolean))]
+        : [];
+
+    return {
+        rowCount: Math.max(lines.length - 1, 0),
+        detected,
+        missingColumns,
+        missingValues,
+        invalidValues,
+        duplicateIds: [...new Set(duplicateIds)],
+        lotColumn,
+        lotValues: uniqueLotValues
+    };
+}
+
+function renderValidation(details, screeningId) {
+    validationDetails = details;
+    validationSummary.style.display = "grid";
+    validationScreeningId.textContent = screeningId;
+    validationColumns.textContent = `${details.detected.length}/${details.detected.length + details.missingColumns.length} detected`;
+    validationMissing.textContent = details.missingValues;
+    validationInvalid.textContent = details.invalidValues;
+    validationDuplicates.textContent = details.duplicateIds.length;
+    validationLot.textContent = details.lotColumn
+        ? `${details.lotColumn} (${details.lotValues.length} value${details.lotValues.length === 1 ? "" : "s"})`
+        : "Not detected";
+    validationFormat.textContent = details.missingColumns.length ? "CSV / incomplete" : "CSV / valid";
+}
+
+
+async function createModuleBFile(file) {
+
+    const text = await file.text();
+    const lines = text.trim().split(/\r?\n/);
+
+    if (lines.length < 2) {
+        throw new Error("CSV contains no component rows.");
+    }
+
+    const parseLine = function (line) {
+        const values = [];
+        let value = "";
+        let quoted = false;
+
+        for (let index = 0; index < line.length; index++) {
+            const character = line[index];
+
+            if (character === '"') {
+                if (quoted && line[index + 1] === '"') {
+                    value += '"';
+                    index++;
+                } else {
+                    quoted = !quoted;
+                }
+            } else if (character === "," && !quoted) {
+                values.push(value.trim());
+                value = "";
+            } else {
+                value += character;
+            }
+        }
+
+        values.push(value.trim());
+        return values;
+    };
+
+    const headers = parseLine(lines[0]).map(function (header) {
+        return header.replace(/^\uFEFF/, "").trim();
+    });
+    const requiredColumns = [
+        "part_id",
+        "IGSS_uA_0h", "IGSS_uA_24h",
+        "IDSS_uA_0h", "IDSS_uA_24h",
+        "VGSth_V_0h", "VGSth_V_24h",
+        "RDSon_mOhm_0h", "RDSon_mOhm_24h"
+    ];
+    const indexes = requiredColumns.map(function (column) {
+        return headers.indexOf(column);
+    });
+
+    if (indexes.some(index => index === -1)) {
+        throw new Error(
+            "Screening needs the Module B 0h and 24h columns in the CSV."
+        );
+    }
+
+    const output = [requiredColumns.join(",")];
+
+    for (let lineIndex = 1; lineIndex < lines.length; lineIndex++) {
+        if (!lines[lineIndex].trim()) {
+            continue;
+        }
+
+        const values = parseLine(lines[lineIndex]);
+        output.push(indexes.map(function (columnIndex) {
+            const value = values[columnIndex] || "";
+            return /[,\"]/.test(value)
+                ? '"' + value.replace(/"/g, '""') + '"'
+                : value;
+        }).join(","));
+    }
+
+    return new File(
+        [output.join("\n")],
+        "module-b-input.csv",
+        { type: "text/csv" }
+    );
+}
+
+
+
+/* =====================================================
+   VALIDATE FILE
+===================================================== */
+
+function validateCSV(file) {
+
+
+    if (!file) {
+
+        return false;
+
+    }
+
+
+    if (
+        !file.name
+            .toLowerCase()
+            .endsWith(".csv")
+    ) {
+
+
+        showMessage(
+            "Please upload a CSV file.",
+            "error"
+        );
+
+
+        return false;
+
+    }
+
+
+
+    if (file.size === 0) {
+
+
+        showMessage(
+            "The selected file is empty.",
+            "error"
+        );
+
+
+        return false;
+
+    }
+
+
+
+    return true;
+
+}
+
+
+
+/* =====================================================
+   RESET PROCESS STEPS
+===================================================== */
+
+function resetProcessSteps() {
+
+
+    const steps = [
+
+        "stepValidation",
+
+        "stepModuleA",
+
+        "stepModuleB",
+
+        "stepFinal"
+
+    ];
+
+
+    steps.forEach(
+        function(stepId) {
+
+
+            const step =
+                document.getElementById(
+                    stepId
+                );
+
+
+            if (!step) {
+                return;
+            }
+
+
+            step.classList.remove(
+                "active",
+                "completed"
+            );
+
+
+            const state =
+                step.querySelector(
+                    ".process-state"
+                );
+
+
+            if (state) {
+
+                state.textContent =
+                    "○";
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   UPDATE STEP
+===================================================== */
+
+function updateStep(
+    id,
+    state
+) {
+
+
+    const step =
+        document.getElementById(
+            id
+        );
+
+
+    if (!step) {
+        return;
+    }
+
+
+    const stateElement =
+        step.querySelector(
+            ".process-state"
+        );
+
+
+    if (state === "active") {
+
+
+        step.classList.remove(
+            "completed"
+        );
+
+
+        step.classList.add(
+            "active"
+        );
+
+
+        if (stateElement) {
+
+            stateElement.textContent =
+                "⟳";
+
+        }
+
+    }
+
+
+
+    if (state === "completed") {
+
+
+        step.classList.remove(
+            "active"
+        );
+
+
+        step.classList.add(
+            "completed"
+        );
+
+
+        if (stateElement) {
+
+            stateElement.textContent =
+                "✓";
+
+        }
+
+    }
+
+
+
+    if (state === "waiting") {
+
+
+        step.classList.remove(
+            "active",
+            "completed"
+        );
+
+
+        if (stateElement) {
+
+            stateElement.textContent =
+                "○";
+
+        }
+
+    }
+
+}
+
+
+
+/* =====================================================
+   HANDLE FILE
+===================================================== */
+
+function handleFile(file) {
+
+
+    if (!validateCSV(file)) {
+
+        return;
+
+    }
+
+
+
+    selectedFile =
+        file;
+
+
+
+    selectedFileName.textContent =
+        file.name;
+
+
+    selectedFileSize.textContent =
+        formatFileSize(
+            file.size
+        );
+
+
+
+    infoFileName.textContent =
+        file.name;
+
+
+    infoFileSize.textContent =
+        formatFileSize(
+            file.size
+        );
+
+
+
+    selectedFileBox.style.display =
+        "flex";
+
+
+    screeningFileInfo.style.display =
+        "grid";
+
+
+
+    uploadStatus.textContent =
+        "Loaded";
+
+
+
+    const reader =
+        new FileReader();
+
+
+
+    reader.onload =
+        function(event) {
+
+
+            const csvText =
+                event.target.result;
+
+            const details = inspectCSV(csvText);
+            screeningId = `SCR-${Date.now()}`;
+            renderValidation(details, screeningId);
+
+
+            const count =
+                countComponents(
+                    csvText
+                );
+
+
+
+            componentCount.textContent =
+                count;
+
+
+
+            const isValid = count > 0 &&
+                details.missingColumns.length === 0 &&
+                details.missingValues === 0 &&
+                details.invalidValues === 0 &&
+                details.duplicateIds.length === 0;
+
+            if (isValid) {
+
+
+                validationStatus.textContent =
+                    "Valid";
+
+
+                showMessage(
+                    `Validation successful. ${count} components are ready for Module A and Module B analysis.`,
+                    "success"
+                );
+
+
+                startScreening.disabled =
+                    false;
+
+
+            }
+
+            else {
+
+
+                validationStatus.textContent =
+                    "Invalid";
+
+
+                showMessage(
+                    `Validation invalid. Correct missing columns (${details.missingColumns.join(", ") || "none"}), missing values (${details.missingValues}), invalid values (${details.invalidValues}), and duplicate component IDs (${details.duplicateIds.length}).`,
+                    "error"
+                );
+
+
+                startScreening.disabled =
+                    true;
+
+            }
+
+
+        };
+
+
+
+    reader.onerror =
+        function() {
+
+
+            validationStatus.textContent =
+                "Error";
+
+
+            showMessage(
+                "Unable to read the CSV file.",
+                "error"
+            );
+
+
+            startScreening.disabled =
+                true;
+
+        };
+
+
+
+    reader.readAsText(file);
+
+}
+
+
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+if (fileInput) {
+
+
+    fileInput.addEventListener(
+        "change",
+        function() {
+
+
+            if (
+                this.files &&
+                this.files.length > 0
+            ) {
+
+
+                handleFile(
+                    this.files[0]
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   DRAG OVER
+===================================================== */
+
+if (dropArea) {
+
+
+    dropArea.addEventListener(
+        "dragover",
+        function(event) {
+
+
+            event.preventDefault();
+
+
+            dropArea.classList.add(
+                "drag-over"
+            );
+
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   DRAG LEAVE
+===================================================== */
+
+if (dropArea) {
+
+
+    dropArea.addEventListener(
+        "dragleave",
+        function() {
+
+
+            dropArea.classList.remove(
+                "drag-over"
+            );
+
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   DROP
+===================================================== */
+
+if (dropArea) {
+
+
+    dropArea.addEventListener(
+        "drop",
+        function(event) {
+
+
+            event.preventDefault();
+
+
+            dropArea.classList.remove(
+                "drag-over"
+            );
+
+
+            const files =
+                event.dataTransfer.files;
+
+
+
+            if (
+                files &&
+                files.length > 0
+            ) {
+
+
+                handleFile(
+                    files[0]
+                );
+
+            }
+
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   REMOVE FILE
+===================================================== */
+
+if (removeFile) {
+
+
+    removeFile.addEventListener(
+        "click",
+        function() {
+
+
+            selectedFile =
+                null;
+
+
+            fileInput.value =
+                "";
+
+
+            selectedFileBox.style.display =
+                "none";
+
+
+            screeningFileInfo.style.display =
+                "none";
+
+
+            componentCount.textContent =
+                "0";
+
+
+            validationStatus.textContent =
+                "Waiting";
+
+
+            uploadStatus.textContent =
+                "Ready";
+
+
+            startScreening.disabled =
+                true;
+
+
+            showMessage(
+                ""
+            );
+
+
+            resetProcessSteps();
+
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   WAIT
+===================================================== */
+
+function wait(milliseconds) {
+
+
+    return new Promise(
+        function(resolve) {
+
+            setTimeout(
+                resolve,
+                milliseconds
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   START SCREENING
+===================================================== */
+
+if (startScreening) {
+
+
+    startScreening.addEventListener(
+        "click",
+        async function() {
+
+
+            if (!selectedFile) {
+
+
+                showMessage(
+                    "Please select a CSV file first.",
+                    "error"
+                );
+
+
+                return;
+
+            }
+
+
+
+            startScreening.disabled =
+                true;
+
+
+            startScreening.textContent =
+                "VALIDATING DATA...";
+
+
+
+            resetProcessSteps();
+
+            try {
+
+
+
+            /* =========================================
+               STEP 1 — VALIDATION
+            ========================================= */
+
+            updateStep(
+                "stepValidation",
+                "active"
+            );
+
+
+            await wait(500);
+
+
+            updateStep(
+                "stepValidation",
+                "completed"
+            );
+
+
+
+            startScreening.textContent =
+                "RUNNING MODULE A...";
+            updateStep("stepModuleA", "active");
+
+            const moduleAForm = new FormData();
+            moduleAForm.append("file", selectedFile);
+            const moduleAResponse = await fetch(
+                ML_API_URL + "/module-a",
+                { method: "POST", body: moduleAForm }
+            );
+            const moduleAData = await moduleAResponse.json();
+
+            if (!moduleAResponse.ok || !moduleAData.success) {
+                throw new Error(
+                    moduleAData.message || "Module A analysis failed."
+                );
+            }
+
+            updateStep("stepModuleA", "completed");
+            startScreening.textContent =
+                "RUNNING MODULE B...";
+            updateStep("stepModuleB", "active");
+
+            const moduleBFile = await createModuleBFile(selectedFile);
+            const moduleBForm = new FormData();
+            moduleBForm.append("file", moduleBFile);
+            const moduleBResponse = await fetch(
+                ML_API_URL + "/module-b/analyze",
+                { method: "POST", body: moduleBForm }
+            );
+            const moduleBData = await moduleBResponse.json();
+
+            if (!moduleBResponse.ok || !moduleBData.success) {
+                throw new Error(
+                    moduleBData.message || "Module B prediction failed."
+                );
+            }
+
+            updateStep("stepModuleB", "completed");
+
+            const moduleBById = new Map(
+                (moduleBData.results || []).map(result => [
+                    result.component_id,
+                    result
+                ])
+            );
+            const resultsBody = document.getElementById("resultsBody");
+            const resultsTable = document.getElementById(
+                "screeningResultsTable"
+            );
+            const screeningEmpty = document.getElementById("screeningEmpty");
+            let passCount = 0;
+            let monitorCount = 0;
+            let rejectCount = 0;
+            const moduleAAnomalyCount = (moduleAData.results || [])
+                .filter(result => result.status === "Anomaly")
+                .length;
+            const moduleBAtRiskCount = (moduleBData.results || [])
+                .filter(result => result.risk === "High" || result.risk === "Review")
+                .length;
+
+            resultsBody.innerHTML = "";
+
+            const pipelineResults = buildScreeningResults(
+                moduleAData.results || [],
+                moduleBData.results || []
+            );
+
+            pipelineResults.forEach(function (result) {
+                if (result.status === FINAL_STATUS.rejected) rejectCount++;
+                else if (result.status === FINAL_STATUS.review) monitorCount++;
+                else passCount++;
+
+                const moduleBResult = result.module_b || {};
+                const predictions = moduleBResult.predictions || {};
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${result.component_id}</td>
+                    <td>${result.module_a?.status || "-"}</td>
+                    <td>${predictions.RDSon_mOhm_168h ?? moduleBResult.score ?? "-"}</td>
+                    <td>${moduleBResult.measurements?.drift ?? "-"}</td>
+                    <td>${result.status}</td>
+                    <td>${result.reason}</td>
+                `;
+                resultsBody.appendChild(row);
+            });
+
+            document.getElementById("totalScreened").textContent =
+                moduleAData.results?.length || 0;
+            document.getElementById("passedCount").textContent = passCount;
+            document.getElementById("monitorCount").textContent = monitorCount;
+            document.getElementById("rejectedCount").textContent = rejectCount;
+            screeningEmpty.style.display = "none";
+            resultsTable.style.display = "block";
+
+            updateStep("stepFinal", "completed");
+            resultStatus.textContent = "Screening Complete";
+            uploadStatus.textContent = "Completed";
+            showMessage(
+                "Module A and Module B completed successfully.",
+                "success"
+            );
+
+            const savedUser = JSON.parse(
+                localStorage.getItem("vyomixUser") || "{}"
+            );
+            const screeningSaveResponse = await fetch(AUTH_API_URL + "/screenings", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    screening_id: screeningId,
+                    user_email: savedUser.email || "anonymous",
+                    filename: selectedFile.name,
+                    total_components: moduleAData.results?.length || 0,
+                    pass_count: passCount,
+                    monitor_count: monitorCount,
+                    reject_count: rejectCount,
+                    module_a_anomaly_count: moduleAAnomalyCount,
+                    module_b_at_risk_count: moduleBAtRiskCount,
+                    review_count: monitorCount,
+                    failed_count: rejectCount,
+                    module_a: moduleAData.results || [],
+                    module_b: moduleBData.results || [],
+                    results: pipelineResults
+                })
+            });
+            const screeningSaveData = await screeningSaveResponse.json();
+            if (!screeningSaveResponse.ok || !screeningSaveData.success) {
+                throw new Error(
+                    screeningSaveData.message || "Completed screening could not be saved."
+                );
+            }
+
+            const screeningState = {
+                screeningId: screeningSaveData.screening_id,
+                filename: selectedFile.name,
+                completedAt: screeningSaveData.created_at,
+                total: moduleAData.results?.length || 0,
+                pass: passCount,
+                monitor: monitorCount,
+                reject: rejectCount,
+                moduleA: moduleAData.results || [],
+                moduleB: moduleBData.results || [],
+                results: pipelineResults
+            };
+            localStorage.setItem(
+                "vyomixActiveScreening",
+                JSON.stringify(screeningState)
+            );
+            resultStatus.textContent =
+                "Complete • " + screeningSaveData.screening_id;
+
+            localStorage.setItem(
+                "vyomixAnalysisSummary",
+                JSON.stringify({
+                    updatedAt: new Date().toISOString(),
+                    screeningId: screeningSaveData.screening_id,
+                    total: moduleAData.results?.length || 0,
+                    normal: passCount,
+                    anomalies: rejectCount,
+                    moduleAAnomalies: moduleAAnomalyCount,
+                    moduleBAtRisk: moduleBAtRiskCount,
+                    review: monitorCount,
+                    failed: rejectCount,
+                    predictions: moduleBData.prediction_count || 0,
+                    highRisk: moduleBData.high_risk_count || 0
+                })
+            );
+
+            const finalScreeningSummary = document.getElementById("finalScreeningSummary");
+            const finalScreeningCounts = document.getElementById("finalScreeningCounts");
+            const finalScreeningIds = document.getElementById("finalScreeningIds");
+            if (finalScreeningSummary) {
+                finalScreeningSummary.style.display = "block";
+                finalScreeningCounts.textContent = `ACCEPTED: ${passCount} | REVIEW / AT-RISK: ${monitorCount} | REJECTED: ${rejectCount}`;
+                finalScreeningIds.textContent = [
+                    `Accepted: ${pipelineResults.filter(result => result.status === FINAL_STATUS.accepted).map(result => result.component_id).join(", ") || "None"}`,
+                    `Review: ${pipelineResults.filter(result => result.status === FINAL_STATUS.review).map(result => result.component_id).join(", ") || "None"}`,
+                    `Rejected: ${pipelineResults.filter(result => result.status === FINAL_STATUS.rejected).map(result => result.component_id).join(", ") || "None"}`
+                ].join(" | ");
+            }
+
+
+            startScreening.disabled =
+                false;
+
+
+            startScreening.textContent =
+                "START SCREENING →";
+
+            } catch (error) {
+                console.error("Screening pipeline error:", error);
+                updateStep("stepFinal", "waiting");
+                resultStatus.textContent = "Screening Failed";
+                uploadStatus.textContent = "Error";
+                showMessage(
+                    error.message || "The screening pipeline could not be completed.",
+                    "error"
+                );
+                startScreening.disabled = false;
+                startScreening.textContent = "START SCREENING →";
+            }
+
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+if (logoutButton) {
+
+
+    logoutButton.addEventListener(
+        "click",
+        function() {
+
+
+            localStorage.removeItem(
+                "vyomixUser"
+            );
+
+
+            localStorage.removeItem(
+                "vyomixEmail"
+            );
+
+
+            window.location.href =
+                "index.html";
+
+
+        }
+    );
+
+}
+
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

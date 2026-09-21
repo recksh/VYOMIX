@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | Module B</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-symbol">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>VYOMIX</h2>
+
+            <span>
+                COMPONENT INTELLIGENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html"
+           class="nav-item">
+
+            <span>▦</span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a href="screening.html"
+           class="nav-item">
+
+            <span>＋</span>
+
+            <span>
+                New Screening
+            </span>
+
+        </a>
+
+
+        <a href="module-a.html"
+           class="nav-item">
+
+            <span>◉</span>
+
+            <span>
+                Module A
+            </span>
+
+        </a>
+
+
+        <a href="module-b.html"
+           class="nav-item active">
+
+            <span>◇</span>
+
+            <span>
+                Module B
+            </span>
+
+        </a>
+
+
+        <a href="history.html"
+           class="nav-item">
+
+            <span>◷</span>
+
+            <span>
+                History
+            </span>
+
+        </a>
+
+
+        <a href="reports.html"
+           class="nav-item">
+
+            <span>▤</span>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+        <a href="settings.html"
+           class="nav-item">
+
+            <span>⚙</span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button">
+
+            <span>↪</span>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>
+                Module B
+            </h1>
+
+            <p>
+                Time-Series Drift Predictor
+            </p>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    👤
+                </div>
+
+                <div class="user-details">
+
+                    <strong id="userName">
+                        User
+                    </strong>
+
+                    <span id="userRole">
+                        Engineer
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         MODULE INTRODUCTION
+    ================================================= -->
+
+    <section class="module-intro">
+
+        <div>
+
+            <span class="module-tag">
+                MODULE B
+            </span>
+
+            <h2>
+                Time-Series Drift Predictor
+            </h2>
+
+            <p>
+
+                Predict future component behavior using
+                early burn-in measurements and identify
+                components that may experience excessive
+                drift during the burn-in period.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =================================================
+         UPLOAD CARD
+    ================================================= -->
+
+    <section class="module-upload-card">
+
+        <div class="upload-header">
+
+            <div>
+
+                <h3>
+                    Upload Screening Data
+                </h3>
+
+                <p>
+
+                    Upload a CSV file containing burn-in
+                    measurement data.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             DROP AREA
+        ================================================= -->
+
+        <div
+            id="dropArea"
+            class="module-drop-area">
+
+
+            <div class="upload-icon">
+                📁
+            </div>
+
+
+            <h3>
+                Upload Component Data
+            </h3>
+
+
+            <p>
+                Drag &amp; drop your CSV file here
+            </p>
+
+
+            <span>
+                or
+            </span>
+
+
+            <label
+                for="csvFile"
+                class="choose-file-button">
+
+                Choose CSV File
+
+            </label>
+
+
+            <input
+                type="file"
+                id="csvFile"
+                accept=".csv"
+                hidden>
+
+
+            <div
+                id="selectedFile"
+                class="selected-file">
+
+                No file selected
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FILE INFORMATION
+        ================================================= -->
+
+        <div
+            id="fileInformation"
+            class="file-information"
+            style="display: none;">
+
+
+            <div class="file-info-item">
+
+                <span>
+                    File Name
+                </span>
+
+                <strong id="fileName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="file-info-item">
+
+                <span>
+                    File Size
+                </span>
+
+                <strong id="fileSize">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="file-info-item">
+
+                <span>
+                    Components Detected
+                </span>
+
+                <strong id="componentCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PREDICT BUTTON
+        ================================================= -->
+
+        <button
+            type="button"
+            id="predictButton"
+            class="analyze-button"
+            disabled>
+
+            📈 Run Drift Prediction
+
+        </button>
+
+
+
+        <!-- =================================================
+             MESSAGE
+        ================================================= -->
+
+        <div
+            id="uploadMessage"
+            class="upload-message">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SUMMARY
+    ================================================= -->
+
+    <section class="module-summary-grid">
+
+
+        <div class="module-summary-card">
+
+            <span>
+                Total Components
+            </span>
+
+            <strong id="totalComponents">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="module-summary-card normal-summary">
+
+            <span>
+                    Normal / Low Risk
+            </span>
+
+                    <strong id="predictionCount">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="module-summary-card anomaly-summary">
+
+            <span>
+                High Risk
+            </span>
+
+            <strong id="highRiskCount">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="module-summary-card">
+
+            <span>
+                    Review / At-Risk
+            </span>
+
+                <strong id="pendingCount">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RESULTS
+    ================================================= -->
+
+    <section class="module-results-card">
+
+        <div class="section-header">
+
+            <div>
+
+                <h3>
+                    Module B — Predicted At-Risk Components
+                </h3>
+
+                <p>
+                    Predicted component behavior at 168h
+                </p>
+
+            </div>
+
+            <span id="resultStatus">
+                Waiting for data
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             EMPTY STATE
+        ================================================= -->
+
+        <div
+            id="resultsEmpty"
+            class="empty-state">
+
+            <div class="empty-icon">
+                ◇
+            </div>
+
+            <h4>
+                No predictions available
+            </h4>
+
+            <p>
+
+                Upload a burn-in dataset and click
+                "Run Drift Prediction" to begin.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             RESULTS TABLE
+        ================================================= -->
+
+        <div
+            id="resultsTableContainer"
+            class="table-container"
+            style="display: none;">
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Component ID
+                        </th>
+
+                        <th>
+                            0h Value
+                        </th>
+
+                        <th>
+                            24h Value
+                        </th>
+
+                        <th>
+                            Predicted 168h (RDSon)
+                        </th>
+
+                        <th>
+                            Drift
+                        </th>
+
+                        <th>
+                            Prediction Method
+                        </th>
+
+                        <th>
+                            Actual 168h
+                        </th>
+
+                        <th>
+                            APE
+                        </th>
+
+                        <th>
+                            Risk
+                        </th>
+
+                        <th>
+                            Final Status
+                        </th>
+
+                        <th>
+                            Explanation
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="resultsBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EXPLAINABILITY
+    ================================================= -->
+
+    <section class="module-explanation-card">
+
+
+        <div class="section-header">
+
+            <div>
+
+                <h3>
+                    Why was this component classified?
+                </h3>
+
+                <p>
+                    Why the prediction was classified
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EMPTY EXPLANATION -->
+
+        <div
+            id="explanationEmpty"
+            class="empty-state">
+
+
+            <div class="empty-icon">
+                🧠
+            </div>
+
+
+            <h4>
+                No explanation available
+            </h4>
+
+
+            <p>
+
+                Prediction explanations will appear here
+                after the Module B model processes the data.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- EXPLANATION -->
+
+        <div
+            id="explanationContent"
+            style="display: none;">
+
+
+            <div class="explanation-box">
+
+                <div class="explanation-title">
+
+                    📈 Prediction Explanation
+
+                </div>
+
+
+                <p id="explanationText">
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer>
+
+        <span>
+            VYOMIX — Component Intelligence
+        </span>
+
+        <span>
+            AI-Driven Burn-In &amp; Screening System
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     MODULE B JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   FILE ELEMENTS
+===================================================== */
+
+const csvFile =
+    document.getElementById("csvFile");
+
+
+const dropArea =
+    document.getElementById("dropArea");
+
+
+const selectedFile =
+    document.getElementById("selectedFile");
+
+
+const predictButton =
+    document.getElementById("predictButton");
+
+
+const uploadMessage =
+    document.getElementById("uploadMessage");
+
+
+
+/* =====================================================
+   FILE INFORMATION
+===================================================== */
+
+const fileInformation =
+    document.getElementById("fileInformation");
+
+
+const fileName =
+    document.getElementById("fileName");
+
+
+const fileSize =
+    document.getElementById("fileSize");
+
+
+const componentCount =
+    document.getElementById("componentCount");
+
+
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
+const totalComponents =
+    document.getElementById("totalComponents");
+
+
+const predictionCount =
+    document.getElementById("predictionCount");
+
+
+const highRiskCount =
+    document.getElementById("highRiskCount");
+
+
+const pendingCount =
+    document.getElementById("pendingCount");
+
+function updateRiskSummary(results) {
+    const rows = results || [];
+    const normal = rows.filter(result => result.risk !== "High" && result.risk !== "Review").length;
+    const review = rows.filter(result => result.risk === "Review").length;
+    const high = rows.filter(result => result.risk === "High").length;
+    predictionCount.textContent = normal;
+    highRiskCount.textContent = high;
+    pendingCount.textContent = review;
+}
+
+
+
+/* =====================================================
+   RESULTS
+===================================================== */
+
+const resultsEmpty =
+    document.getElementById("resultsEmpty");
+
+
+const resultsTableContainer =
+    document.getElementById(
+        "resultsTableContainer"
+    );
+
+
+const resultsBody =
+    document.getElementById("resultsBody");
+
+
+const resultStatus =
+    document.getElementById("resultStatus");
+
+
+
+/* =====================================================
+   EXPLANATION
+===================================================== */
+
+const explanationEmpty =
+    document.getElementById(
+        "explanationEmpty"
+    );
+
+
+const explanationContent =
+    document.getElementById(
+        "explanationContent"
+    );
+
+
+const explanationText =
+    document.getElementById(
+        "explanationText"
+    );
+
+
+
+/* =====================================================
+   SELECTED FILE
+===================================================== */
+
+let selectedFileObject = null;
+
+const MODULE_B_RESULT_STORAGE_KEY = "vyomixLastModuleBResult";
+
+
+
+/* =====================================================
+   FILE SELECT
+===================================================== */
+
+dropArea.addEventListener(
+    "click",
+    function (event) {
+
+        if (
+            event.target.closest("label") ||
+            event.target === csvFile
+        ) {
+            return;
+        }
+
+        csvFile.click();
+
+    }
+);
+
+csvFile.addEventListener(
+    "change",
+    function () {
+
+        if (!this.files.length) {
+            return;
+        }
+
+        handleFile(
+            this.files[0]
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   DRAG OVER
+===================================================== */
+
+dropArea.addEventListener(
+    "dragover",
+    function (event) {
+
+        event.preventDefault();
+
+        dropArea.classList.add(
+            "drag-over"
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   DRAG LEAVE
+===================================================== */
+
+dropArea.addEventListener(
+    "dragleave",
+    function () {
+
+        dropArea.classList.remove(
+            "drag-over"
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   DROP
+===================================================== */
+
+dropArea.addEventListener(
+    "drop",
+    function (event) {
+
+        event.preventDefault();
+
+        dropArea.classList.remove(
+            "drag-over"
+        );
+
+        const files =
+            event.dataTransfer.files;
+
+        if (files.length > 0) {
+
+            handleFile(
+                files[0]
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   HANDLE FILE
+===================================================== */
+
+function handleFile(file) {
+
+
+    /* CHECK FILE TYPE */
+
+    if (
+        !file.name
+            .toLowerCase()
+            .endsWith(".csv")
+    ) {
+
+        uploadMessage.textContent =
+            "Please upload a CSV file.";
+
+        uploadMessage.className =
+            "upload-message error";
+
+        predictButton.disabled =
+            true;
+
+        selectedFileObject =
+            null;
+
+        return;
+
+    }
+
+
+
+    selectedFileObject =
+        file;
+
+    localStorage.removeItem(
+        MODULE_B_RESULT_STORAGE_KEY
+    );
+
+
+
+    /* FILE NAME */
+
+    selectedFile.textContent =
+        "Selected: " + file.name;
+
+
+
+    /* FILE DETAILS */
+
+    fileName.textContent =
+        file.name;
+
+
+    fileSize.textContent =
+        formatFileSize(
+            file.size
+        );
+
+
+    fileInformation.style.display =
+        "grid";
+
+
+    predictButton.disabled =
+        false;
+
+
+
+    /* MESSAGE */
+
+    uploadMessage.textContent =
+        "CSV file selected successfully.";
+
+    uploadMessage.className =
+        "upload-message success";
+
+
+
+    /* READ FILE */
+
+    readCSV(file);
+
+}
+
+
+
+/* =====================================================
+   READ CSV
+===================================================== */
+
+function readCSV(file) {
+
+
+    const reader =
+        new FileReader();
+
+
+    reader.onload =
+        function (event) {
+
+
+            const text =
+                event.target.result;
+
+
+            const cleanedText =
+                text.trim();
+
+
+            if (!cleanedText) {
+
+                resetCounts();
+
+                uploadMessage.textContent =
+                    "The CSV file is empty.";
+
+                uploadMessage.className =
+                    "upload-message error";
+
+                predictButton.disabled =
+                    true;
+
+                return;
+
+            }
+
+
+
+            const lines =
+                cleanedText.split(/\r?\n/);
+
+
+
+            if (lines.length <= 1) {
+
+                resetCounts();
+
+                uploadMessage.textContent =
+                    "No component records were found.";
+
+                uploadMessage.className =
+                    "upload-message error";
+
+                predictButton.disabled =
+                    true;
+
+                return;
+
+            }
+
+
+
+            /* HEADER */
+
+            const header =
+                parseCSVLine(
+                    lines[0]
+                );
+
+
+
+            /* FIND COMPONENT ID */
+
+            const possibleIds = [
+                "part_id",
+                "component_id",
+                "component",
+                "id",
+                "Component_ID"
+            ];
+
+
+            let idIndex = -1;
+
+
+            for (
+                const idName
+                of possibleIds
+            ) {
+
+                idIndex =
+                    header.findIndex(
+                        column =>
+                            column
+                                .trim()
+                                .toLowerCase()
+                            === idName
+                                .trim()
+                                .toLowerCase()
+                    );
+
+
+                if (
+                    idIndex !== -1
+                ) {
+
+                    break;
+
+                }
+
+            }
+
+
+
+            let count = 0;
+
+
+
+            /* COUNT UNIQUE COMPONENTS */
+
+            if (
+                idIndex !== -1
+            ) {
+
+                const ids =
+                    new Set();
+
+
+                for (
+                    let i = 1;
+                    i < lines.length;
+                    i++
+                ) {
+
+                    if (
+                        !lines[i].trim()
+                    ) {
+
+                        continue;
+
+                    }
+
+
+                    const row =
+                        parseCSVLine(
+                            lines[i]
+                        );
+
+
+                    const id =
+                        row[idIndex];
+
+
+                    if (
+                        id &&
+                        id.trim() !== ""
+                    ) {
+
+                        ids.add(
+                            id.trim()
+                        );
+
+                    }
+
+                }
+
+
+                count =
+                    ids.size;
+
+            }
+
+            else {
+
+                /*
+                 * If no component ID column exists,
+                 * count data rows.
+                 */
+
+                count =
+                    lines
+                        .slice(1)
+                        .filter(
+                            line =>
+                                line.trim() !== ""
+                        )
+                        .length;
+
+            }
+
+
+
+            /* UPDATE COUNTS */
+
+            componentCount.textContent =
+                count.toLocaleString();
+
+
+            totalComponents.textContent =
+                count.toLocaleString();
+
+
+            predictionCount.textContent =
+                "0";
+
+
+            highRiskCount.textContent =
+                "0";
+
+
+            pendingCount.textContent =
+                count.toLocaleString();
+
+        };
+
+
+    reader.readAsText(file);
+
+}
+
+
+
+/* =====================================================
+   CSV PARSER
+===================================================== */
+
+function parseCSVLine(line) {
+
+
+    const result = [];
+
+    let current = "";
+
+    let insideQuotes = false;
+
+
+    for (
+        let i = 0;
+        i < line.length;
+        i++
+    ) {
+
+
+        const character =
+            line[i];
+
+
+        if (
+            character === '"'
+        ) {
+
+
+            if (
+                insideQuotes &&
+                line[i + 1] === '"'
+            ) {
+
+                current += '"';
+
+                i++;
+
+            }
+
+            else {
+
+                insideQuotes =
+                    !insideQuotes;
+
+            }
+
+        }
+
+
+        else if (
+            character === "," &&
+            !insideQuotes
+        ) {
+
+            result.push(
+                current
+            );
+
+            current = "";
+
+        }
+
+
+        else {
+
+            current +=
+                character;
+
+        }
+
+    }
+
+
+    result.push(
+        current
+    );
+
+
+    return result;
+
+}
+
+
+
+/* =====================================================
+   FILE SIZE
+===================================================== */
+
+function formatFileSize(bytes) {
+
+
+    if (
+        bytes < 1024
+    ) {
+
+        return (
+            bytes + " B"
+        );
+
+    }
+
+
+    if (
+        bytes < 1024 * 1024
+    ) {
+
+        return (
+            (
+                bytes / 1024
+            ).toFixed(2)
+            + " KB"
+        );
+
+    }
+
+
+    return (
+        (
+            bytes /
+            (1024 * 1024)
+        ).toFixed(2)
+        + " MB"
+    );
+
+}
+
+
+
+/* =====================================================
+   RESET COUNTS
+===================================================== */
+
+function resetCounts() {
+
+
+    componentCount.textContent =
+        "0";
+
+
+    totalComponents.textContent =
+        "0";
+
+
+    predictionCount.textContent =
+        "0";
+
+
+    highRiskCount.textContent =
+        "0";
+
+
+    pendingCount.textContent =
+        "0";
+
+}
+
+
+
+/* =====================================================
+   RUN MODULE B PREDICTION
+===================================================== */
+
+predictButton.addEventListener(
+    "click",
+    async function () {
+
+
+        if (!selectedFileObject) {
+
+            uploadMessage.textContent =
+                "Please select a CSV file first.";
+
+            uploadMessage.className =
+                "upload-message error";
+
+            return;
+
+        }
+
+
+
+        predictButton.disabled =
+            true;
+
+
+        predictButton.textContent =
+            "⏳ Processing...";
+
+
+        resultStatus.textContent =
+            "Processing";
+
+
+        uploadMessage.textContent =
+            "Sending CSV to Module B...";
+
+
+        uploadMessage.className =
+            "upload-message info";
+
+
+
+        try {
+
+
+            /* ==========================================
+               CREATE FORM DATA
+            ========================================== */
+
+            const formData =
+                new FormData();
+
+
+            formData.append(
+                "file",
+                selectedFileObject
+            );
+
+
+
+            /* ==========================================
+               SEND CSV TO FASTAPI
+            ========================================== */
+
+            const response =
+                await fetch(
+                    ML_API_URL + "/module-b/analyze",
+                    {
+                        method: "POST",
+                        body: formData
+                    }
+                );
+
+            if (!response.ok) {
+                throw new Error(
+                    `Module B returned HTTP ${response.status}`
+                );
+            }
+
+
+
+            /* ==========================================
+               READ RESPONSE
+            ========================================== */
+
+            const data =
+                await response.json();
+
+
+            console.log(
+                "Module B response:",
+                data
+            );
+
+
+
+            /* ==========================================
+               CHECK BACKEND RESPONSE
+            ========================================== */
+
+            if (!data.success) {
+
+                throw new Error(
+                    data.message ||
+                    "Module B prediction failed."
+                );
+
+            }
+
+            localStorage.setItem(
+                MODULE_B_RESULT_STORAGE_KEY,
+                JSON.stringify(data)
+            );
+            updateRiskSummary(data.results);
+
+
+
+            /* ==========================================
+               SUCCESS MESSAGE
+            ========================================== */
+
+            uploadMessage.textContent =
+                "Module B prediction completed.";
+
+            uploadMessage.className =
+                "upload-message success";
+
+
+            resultStatus.textContent =
+                "Prediction Complete";
+
+
+
+            /* ==========================================
+               SUMMARY
+            ========================================== */
+
+            predictionCount.textContent =
+                data.prediction_count ?? data.results?.length ?? 0;
+
+
+            highRiskCount.textContent =
+                data.high_risk_count ?? 0;
+
+
+            pendingCount.textContent =
+                "0";
+
+            updateRiskSummary(data.results);
+
+
+
+            /* ==========================================
+               SHOW RESULT
+            ========================================== */
+
+            resultsEmpty.style.display =
+                "none";
+
+
+            resultsTableContainer.style.display =
+                "block";
+
+
+            resultsBody.innerHTML =
+                "";
+
+
+
+            /* ==========================================
+               RESULT ROW
+            ========================================== */
+
+            (data.results || []).forEach(function (result) {
+
+                const row = document.createElement("tr");
+                const measurements = result.measurements || {};
+                const predictedValue = result.predicted_168h
+                    ?? measurements.predicted_168h
+                    ?? result.predictions?.RDSon_mOhm_168h
+                    ?? result.score
+                    ?? result.model_score;
+                const scoreDisplay = predictedValue === undefined || predictedValue === null
+                    ? (result.error || "Unavailable")
+                    : Number(predictedValue).toFixed(4);
+                const finalStatus = result.risk === "High"
+                    ? "FAIL / HIGH RISK"
+                    : result.risk === "Review"
+                        ? "REVIEW"
+                        : "PASS / NORMAL";
+
+                row.innerHTML = `
+                    <td>${result.component_id}</td>
+                    <td>${measurements.value_0h ?? "-"}</td>
+                    <td>${measurements.value_24h ?? "-"}</td>
+                    <td>${scoreDisplay}</td>
+                    <td>${measurements.drift ?? "-"}</td>
+                    <td>${measurements.prediction_method ?? "-"}</td>
+                    <td>${measurements.actual_168h ?? "-"}</td>
+                    <td>${measurements.absolute_percentage_error !== undefined ? `${measurements.absolute_percentage_error}%` : "-"}</td>
+                    <td>${result.status || result.risk || "Review"}</td>
+                    <td>${finalStatus}</td>
+                    <td>${moduleBExplanation(result)}</td>
+                `;
+
+                resultsBody.appendChild(row);
+            });
+
+
+
+            /* ==========================================
+               EXPLANATION
+            ========================================== */
+
+            explanationEmpty.style.display =
+                "none";
+
+
+            explanationContent.style.display =
+                "block";
+
+            const completedScreening = await window.vyomixStoreModuleB(
+                data,
+                selectedFileObject.name
+            );
+            uploadMessage.textContent = completedScreening.results?.length
+                ? "Module B prediction completed. Screening " +
+                  completedScreening.screeningId + " is saved."
+                : "Module B prediction completed. Run Module A first to save the final screening.";
+
+
+            explanationText.textContent =
+                `Module B processed ${
+                    data.prediction_count ?? data.results?.length ?? 0
+                } component predictions. ` +
+                `${data.high_risk_count ?? 0} were classified as high risk. Each row includes the actual 168h prediction and drift-based explanation.`;
+
+        }
+
+
+        catch (error) {
+
+
+            console.error(
+                "Module B error:",
+                error
+            );
+
+
+            uploadMessage.textContent =
+                "Module B backend error: " +
+                error.message;
+
+
+            uploadMessage.className =
+                "upload-message error";
+
+
+            resultStatus.textContent =
+                "Prediction Failed";
+
+
+            resultsEmpty.style.display =
+                "flex";
+
+
+            resultsTableContainer.style.display =
+                "none";
+
+
+            predictionCount.textContent =
+                "0";
+
+
+            highRiskCount.textContent =
+                "0";
+
+
+            pendingCount.textContent =
+                componentCount.textContent;
+
+        }
+
+
+        finally {
+
+
+            predictButton.disabled =
+                false;
+
+
+            predictButton.textContent =
+                "📈 Run Drift Prediction";
+
+        }
+
+    }
+);
+
+
+const savedModuleBResult = null;
+
+
+if (savedModuleBResult) {
+
+    try {
+
+        const data =
+            JSON.parse(
+                savedModuleBResult
+            );
+
+        updateRiskSummary(data.results);
+
+        predictionCount.textContent =
+            data.prediction_count ?? data.results?.length ?? 0;
+
+        highRiskCount.textContent =
+            data.high_risk_count ?? 0;
+
+        pendingCount.textContent =
+            "0";
+
+        updateRiskSummary(data.results);
+
+        resultStatus.textContent =
+            "Prediction Complete";
+
+        resultsEmpty.style.display =
+            "none";
+
+        resultsTableContainer.style.display =
+            "block";
+
+        resultsBody.innerHTML =
+            "";
+
+        (data.results || []).forEach(function (result) {
+
+            const measurements =
+                result.measurements || {};
+
+            const predictedValue =
+                result.predicted_168h
+                ?? measurements.predicted_168h
+                ?? result.predictions?.RDSon_mOhm_168h
+                ?? result.score
+                ?? result.model_score;
+            const finalStatus = result.risk === "High"
+                ? "FAIL / HIGH RISK"
+                : result.risk === "Review"
+                    ? "REVIEW"
+                    : "PASS / NORMAL";
+
+            const row =
+                document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${result.component_id}</td>
+                <td>${measurements.value_0h ?? "-"}</td>
+                <td>${measurements.value_24h ?? "-"}</td>
+                <td>${predictedValue == null ? (result.error || "Unavailable") : Number(predictedValue).toFixed(4)}</td>
+                <td>${measurements.drift ?? "-"}</td>
+                <td>${measurements.prediction_method ?? "-"}</td>
+                <td>${measurements.actual_168h ?? "-"}</td>
+                <td>${measurements.absolute_percentage_error !== undefined ? `${measurements.absolute_percentage_error}%` : "-"}</td>
+                <td>${result.status || result.risk || "Review"}</td>
+                <td>${finalStatus}</td>
+                <td>${moduleBExplanation(result)}</td>
+            `;
+
+            resultsBody.appendChild(
+                row
+            );
+
+        });
+
+        explanationEmpty.style.display =
+            "none";
+
+        explanationContent.style.display =
+            "block";
+
+        explanationText.textContent =
+            `Module B processed ${
+                data.prediction_count ?? data.results?.length ?? 0
+            } component predictions. ` +
+            `${data.high_risk_count ?? 0} were classified as high risk. Each row includes the actual 168h prediction and drift-based explanation.`;
+
+    } catch (error) {
+
+        localStorage.removeItem(
+            MODULE_B_RESULT_STORAGE_KEY
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+if (logoutButton) {
+
+
+    logoutButton.addEventListener(
+        "click",
+        function () {
+
+
+            localStorage.removeItem(
+                "vyomixUser"
+            );
+
+
+            localStorage.removeItem(
+                "vyomixEmail"
+            );
+
+
+            location.reload();
+
+        }
+    );
+
+}
+
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

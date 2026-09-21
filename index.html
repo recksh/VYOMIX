@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | Component Intelligence</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-grid"></div>
+
+
+
+<!-- =====================================================
+     LOGIN CONTAINER
+===================================================== -->
+
+<main class="login-container">
+
+
+
+    <!-- =================================================
+         VYOMIX BRANDING
+    ================================================= -->
+
+    <section class="brand">
+
+
+        <div class="brand-symbol">
+
+            🚀
+
+        </div>
+
+
+        <h1>
+
+            VYOMIX
+
+        </h1>
+
+
+        <p>
+
+            COMPONENT INTELLIGENCE
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         LOGIN CARD
+    ================================================= -->
+
+    <section class="login-card">
+
+
+        <!-- CARD HEADER -->
+
+        <div class="card-header">
+
+
+            <h2>
+
+                Welcome Back
+
+            </h2>
+
+
+            <p>
+
+                Sign in to your screening workspace
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             LOGIN FORM
+        ================================================= -->
+
+        <form id="loginForm">
+
+
+            <!-- EMPLOYEE ID / EMAIL -->
+
+            <div class="input-group">
+
+
+                <label for="loginId">
+
+                    Employee ID / Email
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="loginId"
+                    name="loginId"
+                    placeholder="Enter employee ID or email"
+                    autocomplete="username"
+                    required>
+
+
+            </div>
+
+
+
+            <!-- PASSWORD -->
+
+            <div class="input-group">
+
+
+                <div class="label-row">
+
+
+                    <label for="password">
+
+                        Password
+
+                    </label>
+
+
+                    <a
+                        href="#"
+                        class="forgot"
+                        id="forgotPassword">
+
+                        Forgot password?
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="password-box">
+
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required>
+
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="eye-button"
+                        aria-label="Show password">
+
+                        👁
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOGIN BUTTON
+            ================================================= -->
+
+            <button
+                type="submit"
+                class="login-button">
+
+                LOGIN
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- =================================================
+             SIGN UP
+        ================================================= -->
+
+        <div class="signup-section">
+
+
+            <span>
+
+                Don't have an account?
+
+            </span>
+
+
+            <a href="signup.html">
+
+                Sign Up
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         SECURITY
+    ================================================= -->
+
+    <div class="security">
+
+
+        <span>
+
+            🔒
+
+        </span>
+
+
+        <span>
+
+            Secure VYOMIX Access
+
+        </span>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     LOGIN JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   SHOW / HIDE PASSWORD
+===================================================== */
+
+const passwordInput =
+    document.getElementById(
+        "password"
+    );
+
+
+const togglePassword =
+    document.getElementById(
+        "togglePassword"
+    );
+
+
+if (
+    passwordInput &&
+    togglePassword
+) {
+
+
+    togglePassword.addEventListener(
+        "click",
+        function () {
+
+
+            const isPassword =
+                passwordInput.type === "password";
+
+
+            passwordInput.type =
+                isPassword
+                    ? "text"
+                    : "password";
+
+
+            togglePassword.textContent =
+                isPassword
+                    ? "🙈"
+                    : "👁";
+
+
+            togglePassword.setAttribute(
+                "aria-label",
+                isPassword
+                    ? "Hide password"
+                    : "Show password"
+            );
+
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   FORGOT PASSWORD
+===================================================== */
+
+const forgotPassword =
+    document.getElementById(
+        "forgotPassword"
+    );
+
+
+if (forgotPassword) {
+
+
+    forgotPassword.addEventListener(
+        "click",
+        function (event) {
+
+
+            event.preventDefault();
+
+
+            alert(
+                "Password recovery will be available after the authentication backend is connected."
+            );
+
+
+        }
+    );
+
+}
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

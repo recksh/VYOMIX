@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | Reports</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="sidebar-brand">
+
+        <div class="brand-symbol">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>VYOMIX</h2>
+
+            <span>
+                COMPONENT INTELLIGENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <!-- DASHBOARD -->
+
+        <a href="dashboard.html"
+           class="nav-item">
+
+            <span>▦</span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <!-- NEW SCREENING -->
+
+        <a href="screening.html"
+           class="nav-item">
+
+            <span>＋</span>
+
+            <span>
+                New Screening
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE A -->
+
+        <a href="module-a.html"
+           class="nav-item">
+
+            <span>◉</span>
+
+            <span>
+                Module A
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE B -->
+
+        <a href="module-b.html"
+           class="nav-item">
+
+            <span>◇</span>
+
+            <span>
+                Module B
+            </span>
+
+        </a>
+
+
+
+        <!-- HISTORY -->
+
+        <a href="history.html"
+           class="nav-item">
+
+            <span>◷</span>
+
+            <span>
+                History
+            </span>
+
+        </a>
+
+
+
+        <!-- REPORTS -->
+
+        <a href="reports.html"
+           class="nav-item active">
+
+            <span>▤</span>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+
+        <!-- SETTINGS -->
+
+        <a href="settings.html"
+           class="nav-item">
+
+            <span>⚙</span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button">
+
+            <span>↪</span>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <!-- PAGE TITLE -->
+
+        <div>
+
+            <h1>
+                Reports
+            </h1>
+
+            <p>
+                Screening Reports
+            </p>
+
+        </div>
+
+
+
+        <!-- USER PROFILE -->
+
+        <div class="topbar-right">
+
+
+            <div class="user-profile">
+
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar">
+
+                    U
+
+                </div>
+
+
+                <div class="user-details">
+
+
+                    <strong id="userName">
+
+                        User
+
+                    </strong>
+
+
+                    <span id="userRole">
+
+                        Engineer
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         REPORT CONTENT
+    ================================================= -->
+
+    <section class="dashboard-content">
+
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-text">
+
+
+                <p class="welcome-label">
+
+                    SCREENING DOCUMENTATION
+
+                </p>
+
+
+                <h2>
+
+                    Reports
+
+                </h2>
+
+
+                <p class="welcome-description">
+
+                    Generate and review component screening
+                    reports after analysis is completed.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT OPTIONS
+        ================================================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- SCREENING REPORT -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    ◉
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Screening Report
+
+                    </span>
+
+
+                    <h2 id="screeningReportCount">
+
+                        —
+
+                    </h2>
+
+
+                    <small>
+
+                        Complete screening results
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- MODULE ANALYSIS -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    ▤
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Module Analysis
+
+                    </span>
+
+
+                    <h2 id="moduleReportCount">
+
+                        —
+
+                    </h2>
+
+
+                    <small>
+
+                        Module A + Module B analysis
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- COMPONENT SUMMARY -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    ◇
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Component Summary
+
+                    </span>
+
+
+                    <h2 id="componentSummaryCount">
+
+                        —
+
+                    </h2>
+
+
+                    <small>
+
+                        Component screening overview
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon">
+
+                    ✓
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Report Status
+
+                    </span>
+
+
+                    <h2 id="reportStatusValue">
+
+                        Ready
+
+                    </h2>
+
+
+                    <small>
+
+                        Waiting for screening data
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section class="content-card" id="savedReport" style="display: none;">
+            <div class="section-header">
+                <div>
+                    <h3 id="savedReportTitle">Completed Screening Report</h3>
+                    <p id="savedReportSummary"></p>
+                </div>
+                <span id="savedReportStatus">Saved</span>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>COMPONENT ID</th>
+                            <th>MODULE A</th>
+                            <th>MODULE A SCORE</th>
+                            <th>MODULE A EXPLANATION</th>
+                            <th>MODULE B 168H</th>
+                            <th>DRIFT</th>
+                            <th>RISK</th>
+                            <th>MODULE B EXPLANATION</th>
+                            <th>FINAL DECISION</th>
+                            <th>REASON</th>
+                        </tr>
+                    </thead>
+                    <tbody id="savedReportBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             REPORT GENERATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Report Generation
+
+                    </h3>
+
+
+                    <p>
+
+                        Generate reports from completed
+                        component screening sessions.
+
+                    </p>
+
+                </div>
+
+
+                <span>
+
+                    Waiting
+
+                </span>
+
+
+            </div>
+
+
+
+            <div class="module-metrics">
+
+
+                <!-- SCREENING REPORT -->
+
+                <div>
+
+
+                    <span>
+                        SCREENING REPORT
+                    </span>
+
+
+                    <strong>
+
+                        Complete Screening Results
+
+                    </strong>
+
+
+                    <button
+                        type="button"
+                        class="report-action"
+                        id="screeningReportButton">
+
+                        Generate Report
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- MODULE REPORT -->
+
+                <div>
+
+
+                    <span>
+                        MODULE ANALYSIS
+                    </span>
+
+
+                    <strong>
+
+                        Module A + Module B
+
+                    </strong>
+
+
+                    <button
+                        type="button"
+                        class="report-action"
+                        id="moduleReportButton">
+
+                        View Analysis
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- EXPORT -->
+
+                <div>
+
+
+                    <span>
+                        EXPORT
+                    </span>
+
+
+                    <strong>
+
+                        PDF / Report File
+
+                    </strong>
+
+
+                    <button
+                        type="button"
+                        class="report-action"
+                        id="exportReportButton">
+
+                        Export PDF
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             EMPTY REPORT STATE
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="empty-state">
+
+
+                <div class="empty-icon">
+
+                    📄
+
+                </div>
+
+
+                <h4>
+
+                    No reports available yet
+
+                </h4>
+
+
+                <p>
+
+                    Reports will become available after
+                    completing a component screening.
+
+                </p>
+
+
+                <a
+                    href="screening.html"
+                    class="empty-action-button">
+
+                    Start New Screening
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT WORKFLOW
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Report Workflow
+
+                    </h3>
+
+
+                    <p>
+
+                        Reports are generated from the
+                        completed screening pipeline.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="module-metrics">
+
+
+                <!-- STEP 1 -->
+
+                <div>
+
+                    <span>
+                        STEP 01
+                    </span>
+
+
+                    <strong>
+
+                        Upload Burn-In Data
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- STEP 2 -->
+
+                <div>
+
+                    <span>
+                        STEP 02
+                    </span>
+
+
+                    <strong>
+
+                        Module A + Module B
+
+                    </strong>
+
+                </div>
+
+
+
+                <!-- STEP 3 -->
+
+                <div>
+
+                    <span>
+                        STEP 03
+                    </span>
+
+
+                    <strong class="model-ready">
+
+                        ACCEPTED / REVIEW / REJECTED
+
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer>
+
+
+        <span>
+
+            © 2026 VYOMIX — Component Intelligence
+
+        </span>
+
+
+        <span>
+
+            AI-Driven Burn-In &amp; Screening System
+
+        </span>
+
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     REPORT JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   REPORT BUTTONS
+===================================================== */
+
+const screeningReportButton =
+    document.getElementById(
+        "screeningReportButton"
+    );
+
+
+const moduleReportButton =
+    document.getElementById(
+        "moduleReportButton"
+    );
+
+
+const exportReportButton =
+    document.getElementById(
+        "exportReportButton"
+    );
+
+let reportSummary = {};
+let reportTotal = 0;
+
+document.getElementById("screeningReportCount").textContent =
+    reportTotal ? "Ready" : "—";
+document.getElementById("moduleReportCount").textContent =
+    reportTotal ? "Ready" : "—";
+document.getElementById("componentSummaryCount").textContent =
+    reportTotal;
+document.getElementById("reportStatusValue").textContent =
+    reportTotal ? "Ready" : "Waiting";
+
+const reportsUser = JSON.parse(
+    localStorage.getItem("vyomixUser") || "{}"
+);
+let latestReport = null;
+
+function renderSavedReport(screening) {
+
+    latestReport = screening;
+    reportTotal = screening.components || screening.results?.length || 0;
+    reportSummary = {
+        screeningId: screening.screeningId,
+        total: reportTotal,
+        normal: screening.passCount || 0,
+        moduleAAnomalies: screening.moduleAAnomalies || 0,
+        moduleBAtRisk: screening.moduleBAtRisk || 0,
+        review: screening.reviewCount || 0,
+        failed: screening.failedCount || screening.rejectCount || 0,
+        moduleA: screening.moduleA || [],
+        moduleB: screening.moduleB || [],
+        results: screening.results || []
+    };
+
+    document.getElementById("screeningReportCount").textContent = "Ready";
+    document.getElementById("moduleReportCount").textContent = "Ready";
+    document.getElementById("componentSummaryCount").textContent = reportTotal;
+    document.getElementById("reportStatusValue").textContent = screening.status;
+
+    const report = document.getElementById("savedReport");
+    const body = document.getElementById("savedReportBody");
+    report.style.display = "block";
+    document.getElementById("savedReportTitle").textContent =
+        screening.screeningId + " • Completed Screening Report";
+    document.getElementById("savedReportSummary").textContent =
+        `${reportTotal} components | Module A anomalies: ${reportSummary.moduleAAnomalies} | ` +
+        `Module B at-risk: ${reportSummary.moduleBAtRisk} | Review: ${reportSummary.review} | ` +
+        `Failed/Reject: ${reportSummary.failed}`;
+    const accepted = reportSummary.results.filter(result => result.status === "ACCEPTED / PASS" || result.status === "PASS / NORMAL");
+    const review = reportSummary.results.filter(result => result.status === "REVIEW / AT-RISK" || result.status === "REVIEW");
+    const rejected = reportSummary.results.filter(result => result.status === "REJECTED / FAIL" || result.status === "FAIL / HIGH RISK");
+    body.innerHTML = "";
+
+    reportSummary.results.forEach(function (result) {
+        const moduleA = result.module_a || {};
+        const moduleB = result.module_b || {};
+        const predictions = moduleB.predictions || {};
+        const measurements = moduleB.measurements || {};
+        const row = document.createElement("tr");
+        const moduleAReason = result.module_a_explanation || moduleAExplanation(moduleA);
+        const moduleBReason = result.module_b_explanation || moduleBExplanation(moduleB);
+        [
+            result.component_id,
+            moduleA.status || "-",
+            moduleA.score ?? moduleA.anomaly_score ?? "-",
+            moduleAReason,
+            predictions.RDSon_mOhm_168h ?? measurements.predicted_168h ?? "-",
+            measurements.drift ?? "-",
+            moduleB.risk || "-",
+            moduleBReason,
+            result.status || "-",
+            result.reason || result.explanation || finalDecisionReason(moduleA, moduleB, result.status)
+        ].forEach(function (value, index) {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            if (index === 8) {
+                const normalized = String(value).toLowerCase();
+                cell.innerHTML = `<span class="status-badge ${normalized.includes("reject") ? "rejected" : normalized.includes("review") ? "review" : "accepted"}">${value}</span>`;
+            }
+            row.appendChild(cell);
+        });
+        body.appendChild(row);
+    });
+}
+
+fetch(
+    "http://127.0.0.1:8000/screenings/summary?user_email=" +
+    encodeURIComponent(reportsUser.email || "anonymous")
+)
+    .then(response => response.json())
+    .then(summary => {
+        if (summary.success && summary.latest_screening) {
+            renderSavedReport(summary.latest_screening);
+        }
+    })
+    .catch(error => console.error("Unable to load report data:", error));
+
+
+
+/* =====================================================
+   REPORT BUTTON MESSAGE
+===================================================== */
+
+function reportNotAvailable() {
+
+    if (latestReport) {
+        alert(
+            `Screening ${latestReport.screeningId}: ${reportTotal} components. ` +
+            `Module A anomalies: ${reportSummary.moduleAAnomalies}. ` +
+            `Module B at-risk: ${reportSummary.moduleBAtRisk}. ` +
+            `Final status: ${latestReport.status}.`
+        );
+        return;
+    }
+
+    alert(
+        "No completed screening is available yet."
+    );
+
+}
+
+
+
+/* =====================================================
+   SCREENING REPORT
+===================================================== */
+
+if (screeningReportButton) {
+
+    screeningReportButton.addEventListener(
+        "click",
+        function () {
+            if (!latestReport) {
+                reportNotAvailable();
+                return;
+            }
+
+            const report = JSON.stringify(reportSummary, null, 2);
+            const blob = new Blob([report], { type: "application/json" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = latestReport.screeningId + "-screening-report.json";
+            link.click();
+            URL.revokeObjectURL(link.href);
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   MODULE REPORT
+===================================================== */
+
+if (moduleReportButton) {
+
+    moduleReportButton.addEventListener(
+        "click",
+        reportNotAvailable
+    );
+
+}
+
+
+
+/* =====================================================
+   EXPORT
+===================================================== */
+
+if (exportReportButton) {
+
+    exportReportButton.addEventListener(
+        "click",
+        async function () {
+            if (!reportTotal) {
+                reportNotAvailable();
+                return;
+            }
+
+            try {
+                const { ipcRenderer } = require("electron");
+                const result = await ipcRenderer.invoke("save-report-pdf");
+                if (result.success) {
+                    alert("PDF report saved to:\n" + result.filePath);
+                }
+            } catch (error) {
+                console.error("Unable to export PDF report:", error);
+                alert("Unable to export PDF report: " + error.message);
+            }
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+if (logoutButton) {
+
+    logoutButton.addEventListener(
+        "click",
+        function () {
+
+
+            localStorage.removeItem(
+                "vyomixUser"
+            );
+
+
+            localStorage.removeItem(
+                "vyomixEmail"
+            );
+
+
+            window.location.href =
+                "index.html";
+
+
+        }
+    );
+
+}
+
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

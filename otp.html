@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | OTP Verification</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <main class="login-container">
+
+        <!-- Branding -->
+        <div class="brand">
+
+            <div class="brand-symbol">🚀</div>
+
+            <h1>VYOMIX</h1>
+
+            <p>COMPONENT INTELLIGENCE</p>
+
+        </div>
+
+
+        <!-- OTP Card -->
+        <div class="login-card">
+
+            <div class="card-header">
+
+                <h2>Verify Your Identity</h2>
+
+                <p>
+                    Enter the 6-digit OTP sent to your email
+                </p>
+
+            </div>
+
+
+            <!-- Email Display -->
+            <div class="otp-email">
+    OTP sent to
+    <strong id="otpEmail">your email</strong>
+</div>
+
+
+            <!-- OTP Inputs -->
+            <div class="otp-container">
+
+                <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-box"
+                    inputmode="numeric"
+                    autofocus
+                >
+
+                <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-box"
+                    inputmode="numeric"
+                >
+
+                <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-box"
+                    inputmode="numeric"
+                >
+
+                <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-box"
+                    inputmode="numeric"
+                >
+
+                <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-box"
+                    inputmode="numeric"
+                >
+
+                <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-box"
+                    inputmode="numeric"
+                >
+
+            </div>
+
+
+            <!-- Timer -->
+            <div class="otp-timer">
+
+                Code expires in
+                <span id="timer">05:00</span>
+
+            </div>
+
+
+            <!-- Verify Button -->
+            <button
+                type="button"
+                id="verifyOtp"
+                class="login-button"
+            >
+                VERIFY OTP
+            </button>
+
+
+            <!-- Resend -->
+            <div class="resend-section">
+
+                <span>Didn't receive the code?</span>
+
+                <button
+                    type="button"
+                    id="resendOtp"
+                    class="resend-button"
+                    disabled
+                >
+                    Resend OTP
+                </button>
+
+            </div>
+
+
+            <!-- Back -->
+            <div class="signup-section">
+
+                <a href="index.html">
+                    ← Back to Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Security -->
+        <div class="security">
+
+            🔒 Secure VYOMIX Access
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

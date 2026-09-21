@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | History</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="sidebar-brand">
+
+        <div class="brand-symbol">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>VYOMIX</h2>
+
+            <span>
+                COMPONENT INTELLIGENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <!-- DASHBOARD -->
+
+        <a href="dashboard.html"
+           class="nav-item">
+
+            <span>▦</span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <!-- NEW SCREENING -->
+
+        <a href="screening.html"
+           class="nav-item">
+
+            <span>＋</span>
+
+            <span>
+                New Screening
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE A -->
+
+        <a href="module-a.html"
+           class="nav-item">
+
+            <span>◉</span>
+
+            <span>
+                Module A
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE B -->
+
+        <a href="module-b.html"
+           class="nav-item">
+
+            <span>◇</span>
+
+            <span>
+                Module B
+            </span>
+
+        </a>
+
+
+
+        <!-- HISTORY -->
+
+        <a href="history.html"
+           class="nav-item active">
+
+            <span>◷</span>
+
+            <span>
+                History
+            </span>
+
+        </a>
+
+
+
+        <!-- REPORTS -->
+
+        <a href="reports.html"
+           class="nav-item">
+
+            <span>▤</span>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+
+        <!-- SETTINGS -->
+
+        <a href="settings.html"
+           class="nav-item">
+
+            <span>⚙</span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button">
+
+            <span>↪</span>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <!-- PAGE TITLE -->
+
+        <div>
+
+            <h1>
+                History
+            </h1>
+
+            <p>
+                Screening Records
+            </p>
+
+        </div>
+
+
+
+        <!-- USER PROFILE -->
+
+        <div class="topbar-right">
+
+
+            <div class="user-profile">
+
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar">
+
+                    U
+
+                </div>
+
+
+                <div class="user-details">
+
+
+                    <strong id="userName">
+
+                        User
+
+                    </strong>
+
+
+                    <span id="userRole">
+
+                        Engineer
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         HISTORY CONTENT
+    ================================================= -->
+
+    <section class="dashboard-content">
+
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-text">
+
+
+                <p class="welcome-label">
+
+                    SCREENING RECORDS
+
+                </p>
+
+
+                <h2>
+
+                    Screening History
+
+                </h2>
+
+
+                <p class="welcome-description">
+
+                    View previous component screening
+                    activities and analysis results.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             HISTORY CARD
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <!-- CARD HEADER -->
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Previous Screenings
+
+                    </h3>
+
+
+                    <p>
+
+                        Search and filter completed
+                        screening records.
+
+                    </p>
+
+                </div>
+
+
+                <span>
+
+                    History
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SEARCH & FILTER
+            ================================================= -->
+
+            <div class="history-controls">
+
+
+                <!-- SEARCH -->
+
+                <div class="history-search">
+
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        class="search-input"
+                        placeholder="Search component or screening ID...">
+
+
+                </div>
+
+
+
+                <!-- STATUS FILTER -->
+
+                <div class="history-filter">
+
+
+                    <select
+                        id="statusFilter"
+                        class="filter-select">
+
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+
+                        <option value="normal">
+                            Accepted / Pass
+                        </option>
+
+
+                        <option value="review">
+                            Review / At-Risk
+                        </option>
+
+
+                        <option value="reject">
+                            Rejected / Fail
+                        </option>
+
+
+                    </select>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EMPTY HISTORY
+            ================================================= -->
+
+            <div
+                class="empty-state"
+                id="emptyHistory">
+
+
+                <div class="empty-icon">
+
+                    ◷
+
+                </div>
+
+
+                <h4>
+
+                    No screening history yet
+
+                </h4>
+
+
+                <p>
+
+                    Completed screening results will
+                    appear here automatically.
+
+                </p>
+
+
+                <a
+                    href="screening.html"
+                    class="empty-action-button">
+
+                    Start New Screening
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 HISTORY TABLE
+            ================================================= -->
+
+            <div
+                class="table-container"
+                id="historyTable"
+                style="display: none;">
+
+
+                <table>
+
+
+                    <thead>
+
+
+                        <tr>
+
+
+                            <th>
+                                SCREENING ID
+                            </th>
+
+
+                            <th>
+                                DATE
+                            </th>
+
+
+                            <th>
+                                COMPONENTS
+                            </th>
+
+
+                            <th>ACCEPTED</th>
+                            <th>MODULE A ANOMALIES</th>
+                            <th>MODULE B AT-RISK</th>
+                            <th>REVIEW</th>
+                            <th>REJECTED</th>
+
+
+                            <th>
+                                STATUS
+                            </th>
+
+
+                        </tr>
+
+
+                    </thead>
+
+
+
+                    <tbody id="historyBody">
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+            <div class="table-container" id="filteredComponentTable" style="display: none;">
+                <div class="section-header">
+                    <div>
+                        <h3 id="filteredComponentTitle">Components</h3>
+                        <p id="filteredComponentSummary"></p>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SCREENING ID</th>
+                            <th>COMPONENT ID</th>
+                            <th>STATUS</th>
+                            <th>MODULE A SCORE</th>
+                            <th>MODULE B 168H</th>
+                            <th>DRIFT</th>
+                            <th>REASON</th>
+                        </tr>
+                    </thead>
+                    <tbody id="filteredComponentBody"></tbody>
+                </table>
+            </div>
+
+
+            <div id="historyDetails" class="history-details" style="display: none;">
+                <div class="section-header">
+                    <div>
+                        <h3 id="historyDetailsTitle">Screening Details</h3>
+                        <p id="historyDetailsSummary"></p>
+                    </div>
+                </div>
+                <div class="history-tabs" role="tablist">
+                    <button type="button" class="history-tab active" data-history-view="overall">Overall Decision</button>
+                    <button type="button" class="history-tab" data-history-view="module-a">Module A History</button>
+                    <button type="button" class="history-tab" data-history-view="module-b">Module B History</button>
+                </div>
+                <div class="table-container">
+                    <table id="historyOverallTable">
+                        <thead>
+                            <tr>
+                                <th>COMPONENT ID</th>
+                                <th>MODULE A</th>
+                                <th>MODULE A EXPLANATION</th>
+                                <th>MODULE B 168H</th>
+                                <th>RISK</th>
+                                <th>MODULE B EXPLANATION</th>
+                                <th>FINAL STATUS</th>
+                                <th>REASON</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyDetailsBody"></tbody>
+                    </table>
+                    <table id="historyModuleATable" style="display: none;">
+                        <thead><tr><th>COMPONENT ID</th><th>LOT / BATCH</th><th>STATUS</th><th>SCORE</th><th>THRESHOLD</th><th>EXPLANATION</th></tr></thead>
+                        <tbody id="historyModuleABody"></tbody>
+                    </table>
+                    <table id="historyModuleBTable" style="display: none;">
+                        <thead><tr><th>COMPONENT ID</th><th>LOT / BATCH</th><th>STATUS</th><th>PREDICTED 168H</th><th>DRIFT</th><th>RISK</th><th>EXPLANATION</th></tr></thead>
+                        <tbody id="historyModuleBBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             HISTORY INFORMATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Screening Workflow
+
+                    </h3>
+
+
+                    <p>
+
+                        Completed screenings will be
+                        recorded after analysis.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="module-metrics">
+
+
+                <!-- MODULE A -->
+
+                <div>
+
+
+                    <span>
+                        MODULE A
+                    </span>
+
+
+                    <strong>
+                        Dynamic Anomaly Detection
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- MODULE B -->
+
+                <div>
+
+
+                    <span>
+                        MODULE B
+                    </span>
+
+
+                    <strong>
+                        Drift Prediction
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- FINAL RESULT -->
+
+                <div>
+
+
+                    <span>
+                        FINAL RESULT
+                    </span>
+
+
+                    <strong class="model-ready">
+                        ACCEPTED / REVIEW / REJECTED
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer>
+
+
+        <span>
+
+            © 2026 VYOMIX — Component Intelligence
+
+        </span>
+
+
+        <span>
+
+            AI-Driven Burn-In &amp; Screening System
+
+        </span>
+
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     HISTORY JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   HISTORY DATA
+===================================================== */
+
+/*
+    History starts empty.
+
+    Later, completed screenings from the backend
+    will be loaded here.
+*/
+
+let historyData = [];
+
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+
+const statusFilter =
+    document.getElementById(
+        "statusFilter"
+    );
+
+
+const emptyHistory =
+    document.getElementById(
+        "emptyHistory"
+    );
+
+
+const historyTable =
+    document.getElementById(
+        "historyTable"
+    );
+
+
+const historyBody =
+    document.getElementById(
+        "historyBody"
+    );
+
+
+
+/* =====================================================
+   DISPLAY HISTORY
+===================================================== */
+
+function displayHistory() {
+
+
+    const searchText =
+        searchInput
+            ? searchInput.value
+                .trim()
+                .toLowerCase()
+            : "";
+
+
+    const selectedStatus =
+        statusFilter
+            ? statusFilter.value
+            : "all";
+
+
+    const filteredHistory =
+        historyData.filter(
+            function (record) {
+
+
+                const matchesSearch =
+
+                    !searchText ||
+
+                    String(
+                        record.screeningId || ""
+                    )
+                    .toLowerCase()
+                    .includes(searchText)
+
+                    ||
+
+                    String(
+                        record.component || ""
+                    )
+                    .toLowerCase()
+                    .includes(searchText);
+
+
+
+                const matchesStatus =
+
+                    selectedStatus === "all" ||
+                    selectedStatus === "normal" && Number(record.passCount || 0) > 0 ||
+                    selectedStatus === "review" && Number(record.reviewCount || 0) > 0 ||
+                    selectedStatus === "reject" && Number(record.rejectCount || 0) > 0;
+
+
+
+                return (
+                    matchesSearch &&
+                    matchesStatus
+                );
+
+            }
+        );
+
+    const filteredComponentTable = document.getElementById("filteredComponentTable");
+    const filteredComponentBody = document.getElementById("filteredComponentBody");
+    const filteredComponentTitle = document.getElementById("filteredComponentTitle");
+    const filteredComponentSummary = document.getElementById("filteredComponentSummary");
+    filteredComponentBody.innerHTML = "";
+
+    if (selectedStatus !== "all") {
+        const statusLabel = selectedStatus === "normal"
+            ? "Accepted / PASS"
+            : selectedStatus === "review"
+                ? "Review / AT-RISK"
+                : "Rejected / FAIL";
+        const components = [];
+        historyData.forEach(function (record) {
+            (record.results || []).forEach(function (result) {
+                const status = String(result.status || "").toLowerCase();
+                const matches = selectedStatus === "normal"
+                    ? status.includes("pass")
+                    : selectedStatus === "review"
+                        ? status.includes("review")
+                        : status.includes("reject") || status.includes("fail");
+                if (matches) {
+                    const moduleA = result.module_a || {};
+                    const moduleB = result.module_b || {};
+                    const measurements = moduleB.measurements || {};
+                    const predictions = moduleB.predictions || {};
+                    components.push({
+                        screeningId: record.screeningId,
+                        componentId: result.component_id,
+                        status: result.status,
+                        moduleAScore: moduleA.score ?? moduleA.anomaly_score ?? "-",
+                        predicted: predictions.RDSon_mOhm_168h ?? measurements.predicted_168h ?? "-",
+                        drift: measurements.drift ?? "-",
+                        reason: result.reason || result.explanation || "-"
+                    });
+                }
+            });
+        });
+
+        filteredComponentTitle.textContent = statusLabel + " Components";
+        filteredComponentSummary.textContent = `${components.length} matching component${components.length === 1 ? "" : "s"}`;
+        components.forEach(function (component) {
+            const row = document.createElement("tr");
+            [component.screeningId, component.componentId, component.status, component.moduleAScore, component.predicted, component.drift, component.reason]
+                .forEach(function (value, index) {
+                    const cell = document.createElement("td");
+                    cell.textContent = value;
+                    if (index === 2) {
+                        const normalized = String(value).toLowerCase();
+                        cell.innerHTML = `<span class="status-badge ${normalized.includes("reject") || normalized.includes("fail") ? "rejected" : normalized.includes("review") ? "review" : "accepted"}">${value}</span>`;
+                    }
+                    row.appendChild(cell);
+                });
+            filteredComponentBody.appendChild(row);
+        });
+        filteredComponentTable.style.display = "block";
+    } else {
+        filteredComponentTable.style.display = "none";
+    }
+
+
+
+    /* CLEAR TABLE */
+
+    if (historyBody) {
+
+        historyBody.innerHTML = "";
+
+    }
+
+
+
+    /* NO RECORDS */
+
+    if (filteredHistory.length === 0) {
+
+
+        if (historyTable) {
+
+            historyTable.style.display =
+                "none";
+
+        }
+
+
+        if (emptyHistory) {
+
+            emptyHistory.style.display =
+                "block";
+
+        }
+
+
+        return;
+
+    }
+
+
+
+    /* SHOW TABLE */
+
+    if (emptyHistory) {
+
+        emptyHistory.style.display =
+            "none";
+
+    }
+
+
+    if (historyTable) {
+
+        historyTable.style.display =
+            "block";
+
+    }
+
+
+
+    /* ADD RECORDS */
+
+    filteredHistory.forEach(
+        function (record) {
+
+
+            const row =
+                document.createElement("tr");
+
+
+
+            const status =
+                String(
+                    record.status || ""
+                )
+                .toLowerCase();
+
+
+
+            let statusClass =
+                "status-normal";
+
+
+            if (status.includes("reject")) {
+
+                statusClass =
+                    "status-anomaly";
+
+            }
+
+
+
+            row.innerHTML = `
+
+                <td>
+                    ${record.screeningId || "-"}
+                </td>
+
+                <td>
+                    ${record.date || "-"}
+                </td>
+
+                <td>
+                    ${record.components || "-"}
+                </td>
+
+                <td>${record.passCount || "0"}</td>
+                <td>${record.moduleAAnomalies || "0"}</td>
+                <td>${record.moduleBAtRisk || "0"}</td>
+                <td>${record.reviewCount || "0"}</td>
+                <td>${record.rejectCount || "0"}</td>
+
+                <td>
+
+                    <span class="status ${statusClass}">
+
+                        ${record.status || "-"}
+
+                    </span>
+
+                </td>
+
+            `;
+
+            row.title = "View complete screening results";
+            row.addEventListener("click", function () {
+                showHistoryDetails(record);
+            });
+
+
+
+            if (historyBody) {
+
+                historyBody.appendChild(
+                    row
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+function showHistoryDetails(record) {
+
+    const details = document.getElementById("historyDetails");
+    const title = document.getElementById("historyDetailsTitle");
+    const summary = document.getElementById("historyDetailsSummary");
+    const body = document.getElementById("historyDetailsBody");
+    const moduleABody = document.getElementById("historyModuleABody");
+    const moduleBBody = document.getElementById("historyModuleBBody");
+    if (!details || !body) return;
+
+    title.textContent = record.screeningId + " • Complete Results";
+    summary.textContent =
+        `${record.components} components | ${record.moduleAAnomalies} Module A anomalies | ` +
+        `${record.moduleBAtRisk} Module B at-risk | ${record.status}`;
+    body.innerHTML = "";
+    moduleABody.innerHTML = "";
+    moduleBBody.innerHTML = "";
+
+    (record.results || []).forEach(function (result) {
+        const moduleA = result.module_a || {};
+        const moduleB = result.module_b || {};
+        const predictions = moduleB.predictions || {};
+        const measurements = moduleB.measurements || {};
+        const row = document.createElement("tr");
+        [
+            result.component_id,
+            moduleA.status || "-",
+            result.module_a_explanation || moduleA.explanation || "-",
+            predictions.RDSon_mOhm_168h ?? measurements.predicted_168h ?? "-",
+            moduleB.risk || "-",
+            result.module_b_explanation || moduleB.explanation || "-",
+            result.status || "-",
+            result.reason || result.explanation || "-"
+        ].forEach(function (value, index) {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            if (index === 6) {
+                const normalized = String(value).toLowerCase();
+                cell.innerHTML = `<span class="status-badge ${normalized.includes("reject") ? "rejected" : normalized.includes("review") ? "review" : "accepted"}">${value}</span>`;
+            }
+            row.appendChild(cell);
+        });
+        body.appendChild(row);
+    });
+
+    (record.moduleA || []).forEach(function (moduleA) {
+        const moduleARow = document.createElement("tr");
+        [
+            moduleA.component_id || "-",
+            moduleA.lot_batch || "-",
+            moduleA.status || "-",
+            moduleA.score ?? moduleA.anomaly_score ?? "-",
+            moduleA.threshold ?? "-",
+            moduleA.explanation || "-"
+        ].forEach(value => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            moduleARow.appendChild(cell);
+        });
+        moduleABody.appendChild(moduleARow);
+    });
+
+    (record.moduleB || []).forEach(function (moduleB) {
+        const predictions = moduleB.predictions || {};
+        const measurements = moduleB.measurements || {};
+        const moduleBRow = document.createElement("tr");
+        [
+            moduleB.component_id || "-",
+            moduleB.lot_batch || "-",
+            moduleB.status || moduleB.risk || "-",
+            predictions.RDSon_mOhm_168h ?? measurements.predicted_168h ?? "-",
+            measurements.drift ?? "-",
+            moduleB.risk || "-",
+            moduleB.explanation || "-"
+        ].forEach(function (value, index) {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            if (index === 2) {
+                const normalized = String(value).toLowerCase();
+                cell.innerHTML = `<span class="status-badge ${normalized.includes("high") ? "rejected" : normalized.includes("review") ? "review" : "accepted"}">${value}</span>`;
+            }
+            moduleBRow.appendChild(cell);
+        });
+        moduleBBody.appendChild(moduleBRow);
+    });
+
+    details.style.display = "block";
+    details.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.querySelectorAll(".history-tab").forEach(function (tab) {
+    tab.addEventListener("click", function () {
+        document.querySelectorAll(".history-tab").forEach(item => item.classList.remove("active"));
+        tab.classList.add("active");
+        document.getElementById("historyOverallTable").style.display = tab.dataset.historyView === "overall" ? "table" : "none";
+        document.getElementById("historyModuleATable").style.display = tab.dataset.historyView === "module-a" ? "table" : "none";
+        document.getElementById("historyModuleBTable").style.display = tab.dataset.historyView === "module-b" ? "table" : "none";
+    });
+});
+
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+if (searchInput) {
+
+
+    searchInput.addEventListener(
+        "input",
+        displayHistory
+    );
+
+}
+
+
+
+/* =====================================================
+   FILTER
+===================================================== */
+
+if (statusFilter) {
+
+
+    statusFilter.addEventListener(
+        "change",
+        displayHistory
+    );
+
+}
+
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+if (logoutButton) {
+
+
+    logoutButton.addEventListener(
+        "click",
+        function () {
+
+
+            localStorage.removeItem(
+                "vyomixUser"
+            );
+
+
+            localStorage.removeItem(
+                "vyomixEmail"
+            );
+
+
+            window.location.href =
+                "index.html";
+
+
+        }
+    );
+
+
+}
+
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+displayHistory();
+
+const historyUser = JSON.parse(
+    localStorage.getItem("vyomixUser") || "{}"
+);
+fetch(
+    "http://127.0.0.1:8000/screenings?user_email=" +
+    encodeURIComponent(historyUser.email || "anonymous")
+)
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            historyData = data.screenings || [];
+            displayHistory();
+        }
+    })
+    .catch(error => console.error("Unable to load history:", error));
+
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

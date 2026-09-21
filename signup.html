@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | Create Account</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-grid"></div>
+
+
+    <!-- Main Container -->
+    <main class="login-container">
+
+        <!-- VYOMIX Branding -->
+        <div class="brand">
+
+            <div class="brand-symbol">🚀</div>
+
+            <h1>VYOMIX</h1>
+
+            <p>COMPONENT INTELLIGENCE</p>
+
+        </div>
+
+
+        <!-- Sign Up Card -->
+        <div class="login-card">
+
+            <div class="card-header">
+
+                <h2>Create Account</h2>
+
+                <p>
+                    Register for your screening workspace
+                </p>
+
+            </div>
+
+
+            <!-- Sign Up Form -->
+            <form id="signupForm" novalidate>
+
+                <!-- Full Name -->
+                <div class="input-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Employee ID -->
+                <div class="input-group">
+
+                    <label for="employeeId">
+                        Employee ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="employeeId"
+                        placeholder="Enter employee ID"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Role -->
+                <div class="input-group">
+
+                    <label for="role">
+                        Role
+                    </label>
+
+                    <select id="role" required>
+
+                        <option value="">
+                            Select your role
+                        </option>
+
+                        <option value="Engineer">
+                            Engineer
+                        </option>
+
+                        <option value="QA Inspector">
+                            QA Inspector
+                        </option>
+
+                        <option value="Test Engineer">
+                            Test Engineer
+                        </option>
+
+                        <option value="Administrator">
+                            Administrator
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+
+                    <label for="signupPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Create Account -->
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    CREATE ACCOUNT
+                </button>
+
+            </form>
+
+
+            <!-- Back to Login -->
+            <div class="signup-section">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="index.html">
+                    Login
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Security -->
+        <div class="security">
+
+            🔒 Secure VYOMIX Access
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

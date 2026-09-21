@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | Module A</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-symbol">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>VYOMIX</h2>
+
+            <span>
+                COMPONENT INTELLIGENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html"
+           class="nav-item">
+
+            <span>▦</span>
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <a href="screening.html"
+           class="nav-item">
+
+            <span>＋</span>
+            <span>New Screening</span>
+
+        </a>
+
+
+        <a href="module-a.html"
+           class="nav-item active">
+
+            <span>◉</span>
+            <span>Module A</span>
+
+        </a>
+
+
+        <a href="module-b.html"
+           class="nav-item">
+
+            <span>◇</span>
+            <span>Module B</span>
+
+        </a>
+
+
+        <a href="history.html"
+           class="nav-item">
+
+            <span>◷</span>
+            <span>History</span>
+
+        </a>
+
+
+        <a href="reports.html"
+           class="nav-item">
+
+            <span>▤</span>
+            <span>Reports</span>
+
+        </a>
+
+
+        <a href="settings.html"
+           class="nav-item">
+
+            <span>⚙</span>
+            <span>Settings</span>
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button">
+
+            <span>↪</span>
+            <span>Logout</span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>
+                    Module A — Detected Anomalies
+            </h1>
+
+            <p>
+                Dynamic Anomaly Detection
+            </p>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    👤
+                </div>
+
+                <div class="user-details">
+
+                    <strong id="userName">
+                        User
+                    </strong>
+
+                    <span id="userRole">
+                        Engineer
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================= -->
+
+    <section class="module-intro">
+
+        <div>
+
+            <span class="module-tag">
+                MODULE A
+            </span>
+
+            <h2>
+                Dynamic Anomaly Detection
+            </h2>
+
+            <p>
+                Identify components whose electrical
+                behavior deviates significantly from
+                the normal lot population, even when
+                absolute datasheet limits are not exceeded.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =================================================
+         UPLOAD
+    ================================================= -->
+
+    <section class="module-upload-card">
+
+        <div class="upload-header">
+
+            <div>
+
+                <h3>
+                    Upload Screening Data
+                </h3>
+
+                <p>
+                    Upload a CSV file containing burn-in
+                    measurement data.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DROP AREA -->
+
+        <div
+            id="dropArea"
+            class="module-drop-area">
+
+            <div class="upload-icon">
+                📁
+            </div>
+
+            <h3>
+                Upload Component Data
+            </h3>
+
+            <p>
+                Drag &amp; drop your CSV file here
+            </p>
+
+            <span>
+                or
+            </span>
+
+
+            <label
+                for="csvFile"
+                class="choose-file-button">
+
+                Choose CSV File
+
+            </label>
+
+
+            <input
+                type="file"
+                id="csvFile"
+                accept=".csv"
+                hidden>
+
+
+            <div
+                id="selectedFile"
+                class="selected-file">
+
+                No file selected
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FILE INFORMATION
+        ================================================= -->
+
+        <div
+            id="fileInformation"
+            class="file-information"
+            style="display:none;">
+
+            <div class="file-info-item">
+
+                <span>
+                    File Name
+                </span>
+
+                <strong id="fileName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="file-info-item">
+
+                <span>
+                    File Size
+                </span>
+
+                <strong id="fileSize">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="file-info-item">
+
+                <span>
+                    Components Detected
+                </span>
+
+                <strong id="componentCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ANALYZE BUTTON
+        ================================================= -->
+
+        <button
+            type="button"
+            id="analyzeButton"
+            class="analyze-button"
+            disabled>
+
+            🔍 Analyze Data
+
+        </button>
+
+
+
+        <!-- =================================================
+             MESSAGE
+        ================================================= -->
+
+        <div
+            id="uploadMessage"
+            class="upload-message">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SUMMARY
+    ================================================= -->
+
+    <section class="module-summary-grid">
+
+
+        <div class="module-summary-card">
+
+            <span>
+                Total Components
+            </span>
+
+            <strong id="totalComponents">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="module-summary-card normal-summary">
+
+            <span>
+                Normal
+            </span>
+
+            <strong id="normalComponents">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="module-summary-card anomaly-summary">
+
+            <span>
+                Anomalies
+            </span>
+
+            <strong id="anomalyComponents">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="module-summary-card">
+
+            <span>
+                Pending
+            </span>
+
+            <strong id="pendingComponents">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RESULTS
+    ================================================= -->
+
+    <section class="module-results-card">
+
+        <div class="section-header">
+
+            <div>
+
+                <h3>
+                    Module A — Detected Anomalies
+                </h3>
+
+                <p>
+                    Component-wise anomaly detection results
+                </p>
+
+            </div>
+
+
+            <span id="resultStatus">
+                Waiting for data
+            </span>
+
+        </div>
+
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            id="resultsEmpty"
+            class="empty-state">
+
+            <div class="empty-icon">
+                ◉
+            </div>
+
+            <h4>
+                No analysis results yet
+            </h4>
+
+            <p>
+                Upload component data and click
+                "Analyze Data" to begin.
+            </p>
+
+        </div>
+
+
+
+        <!-- RESULTS TABLE -->
+
+        <div
+            id="resultsTableContainer"
+            class="table-container"
+            style="display:none;">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Component ID
+                        </th>
+
+                        <th>
+                            Lot / Batch
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Anomaly Score
+                        </th>
+
+                        <th>
+                            Explanation
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="resultsBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EXPLAINABILITY
+    ================================================= -->
+
+    <section class="module-explanation-card">
+
+        <div class="section-header">
+
+            <div>
+
+                <h3>
+                    Why was this component flagged?
+                </h3>
+
+                <p>
+                    Why a component was flagged
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="explanationEmpty"
+            class="empty-state">
+
+            <div class="empty-icon">
+                🧠
+            </div>
+
+            <h4>
+                No explanation available
+            </h4>
+
+            <p>
+                Anomaly explanations will appear here
+                after analysis.
+            </p>
+
+        </div>
+
+
+        <div
+            id="explanationContent"
+            style="display:none;">
+
+            <div class="explanation-box">
+
+                <div class="explanation-title">
+                    ⚠ Anomaly Detection
+                </div>
+
+                <p id="explanationText">
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer>
+
+        <span>
+            VYOMIX — Component Intelligence
+        </span>
+
+        <span>
+            AI-Driven Burn-In &amp; Screening System
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     MODULE A JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   VYOMIX ML BACKEND
+===================================================== */
+
+/*
+   GMM threshold obtained from
+   deployment metadata.
+*/
+
+const GMM_THRESHOLD =
+    348.28;
+
+
+
+/* =====================================================
+   EXACT 32 MODEL INPUT COLUMNS
+===================================================== */
+
+const MODEL_COLUMNS = [
+
+    "IGSS_uA_0h",
+
+    "IGSS_uA_24h",
+
+    "IGSS_uA_96h",
+
+    "IDSS_uA_0h",
+
+    "IDSS_uA_24h",
+
+    "IDSS_uA_96h",
+
+    "VGSth_V_0h",
+
+    "VGSth_V_24h",
+
+    "VGSth_V_96h",
+
+    "RDSon_mOhm_0h",
+
+    "RDSon_mOhm_24h",
+
+    "RDSon_mOhm_96h",
+
+    "IGSS_uA_slope_0_24h",
+
+    "IGSS_uA_slope_24_96h",
+
+    "IDSS_uA_slope_0_24h",
+
+    "IDSS_uA_slope_24_96h",
+
+    "VGSth_V_slope_0_24h",
+
+    "VGSth_V_slope_24_96h",
+
+    "RDSon_mOhm_slope_0_24h",
+
+    "RDSon_mOhm_slope_24_96h",
+
+    "IGSS_uA_0h_lot_z",
+
+    "IGSS_uA_24h_lot_z",
+
+    "IGSS_uA_96h_lot_z",
+
+    "IDSS_uA_0h_lot_z",
+
+    "IDSS_uA_24h_lot_z",
+
+    "IDSS_uA_96h_lot_z",
+
+    "VGSth_V_0h_lot_z",
+
+    "VGSth_V_24h_lot_z",
+
+    "VGSth_V_96h_lot_z",
+
+    "RDSon_mOhm_0h_lot_z",
+
+    "RDSon_mOhm_24h_lot_z",
+
+    "RDSon_mOhm_96h_lot_z"
+
+];
+
+
+
+/* =====================================================
+   HTML ELEMENTS
+===================================================== */
+
+const csvFile =
+    document.getElementById("csvFile");
+
+const dropArea =
+    document.getElementById("dropArea");
+
+const selectedFile =
+    document.getElementById("selectedFile");
+
+const analyzeButton =
+    document.getElementById("analyzeButton");
+
+const uploadMessage =
+    document.getElementById("uploadMessage");
+
+const fileInformation =
+    document.getElementById("fileInformation");
+
+const fileName =
+    document.getElementById("fileName");
+
+const fileSize =
+    document.getElementById("fileSize");
+
+const componentCount =
+    document.getElementById("componentCount");
+
+const totalComponents =
+    document.getElementById("totalComponents");
+
+const normalComponents =
+    document.getElementById("normalComponents");
+
+const anomalyComponents =
+    document.getElementById("anomalyComponents");
+
+const pendingComponents =
+    document.getElementById("pendingComponents");
+
+const resultsEmpty =
+    document.getElementById("resultsEmpty");
+
+const resultsTableContainer =
+    document.getElementById("resultsTableContainer");
+
+const resultsBody =
+    document.getElementById("resultsBody");
+
+const resultStatus =
+    document.getElementById("resultStatus");
+
+const explanationEmpty =
+    document.getElementById("explanationEmpty");
+
+const explanationContent =
+    document.getElementById("explanationContent");
+
+const explanationText =
+    document.getElementById("explanationText");
+
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let selectedCSVFile = null;
+
+let csvHeaders = [];
+
+let csvRows = [];
+
+let componentRows = [];
+
+
+
+/* =====================================================
+   FILE SELECT
+===================================================== */
+
+csvFile.addEventListener(
+    "change",
+    function () {
+
+        if (!this.files.length) {
+            return;
+        }
+
+        handleFile(this.files[0]);
+
+    }
+);
+
+
+
+/* =====================================================
+   DRAG OVER
+===================================================== */
+
+dropArea.addEventListener(
+    "dragover",
+    function (event) {
+
+        event.preventDefault();
+
+        dropArea.classList.add(
+            "drag-over"
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   DRAG LEAVE
+===================================================== */
+
+dropArea.addEventListener(
+    "dragleave",
+    function () {
+
+        dropArea.classList.remove(
+            "drag-over"
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   DROP
+===================================================== */
+
+dropArea.addEventListener(
+    "drop",
+    function (event) {
+
+        event.preventDefault();
+
+        dropArea.classList.remove(
+            "drag-over"
+        );
+
+        const files =
+            event.dataTransfer.files;
+
+        if (files.length > 0) {
+
+            handleFile(files[0]);
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   HANDLE FILE
+===================================================== */
+
+function handleFile(file) {
+
+    if (
+        !file.name
+            .toLowerCase()
+            .endsWith(".csv")
+    ) {
+
+        uploadMessage.textContent =
+            "Please upload a CSV file.";
+
+        uploadMessage.className =
+            "upload-message error";
+
+        analyzeButton.disabled =
+            true;
+
+        return;
+    }
+
+
+    localStorage.removeItem("vyomixActiveScreening");
+    selectedCSVFile =
+        file;
+
+
+    selectedFile.textContent =
+        "Selected: " + file.name;
+
+
+    fileName.textContent =
+        file.name;
+
+
+    fileSize.textContent =
+        formatFileSize(file.size);
+
+
+    fileInformation.style.display =
+        "grid";
+
+
+    analyzeButton.disabled =
+        true;
+
+
+    uploadMessage.textContent =
+        "Reading CSV data...";
+
+    uploadMessage.className =
+        "upload-message info";
+
+
+    readCSV(file);
+
+}
+
+
+
+/* =====================================================
+   READ CSV
+===================================================== */
+
+function readCSV(file) {
+
+    const reader =
+        new FileReader();
+
+
+    reader.onload =
+        function (event) {
+
+            try {
+
+                const text =
+                    event.target.result
+                        .replace(/^\uFEFF/, "")
+                        .trim();
+
+
+                if (!text) {
+
+                    throw new Error(
+                        "The CSV file is empty."
+                    );
+
+                }
+
+
+                const lines =
+                    text.split(/\r?\n/);
+
+
+                if (lines.length <= 1) {
+
+                    throw new Error(
+                        "No component records were found."
+                    );
+
+                }
+
+
+                csvHeaders =
+                    parseCSVLine(lines[0])
+                        .map(
+                            column =>
+                                column.trim()
+                        );
+
+
+                /*
+                ------------------------------------------------
+                CHECK REQUIRED MODEL COLUMNS
+                ------------------------------------------------
+                */
+
+                const rawColumns = [
+                    "IGSS_uA_0h", "IGSS_uA_24h",
+                    "IDSS_uA_0h", "IDSS_uA_24h",
+                    "VGSth_V_0h", "VGSth_V_24h",
+                    "RDSon_mOhm_0h", "RDSon_mOhm_24h"
+                ];
+                const hasProcessedColumns = MODEL_COLUMNS.every(
+                    column => csvHeaders.includes(column)
+                );
+                const hasRawColumns = rawColumns.every(
+                    column => csvHeaders.includes(column)
+                );
+
+                if (!hasProcessedColumns && !hasRawColumns) {
+                    throw new Error(
+                        "CSV must contain either the 32 processed model columns or the raw 0h and 24h measurement columns."
+                    );
+                }
+
+
+                /*
+                ------------------------------------------------
+                FIND COMPONENT ID
+                ------------------------------------------------
+                */
+
+                const possibleIdNames = [
+
+                    "part_id",
+
+                    "component_id",
+
+                    "id"
+
+                ];
+
+
+                let idIndex = -1;
+
+
+                for (
+                    const name
+                    of possibleIdNames
+                ) {
+
+                    idIndex =
+                        csvHeaders.findIndex(
+                            column =>
+                                column
+                                    .toLowerCase()
+                                === name
+                        );
+
+
+                    if (
+                        idIndex !== -1
+                    ) {
+
+                        break;
+
+                    }
+
+                }
+
+
+                /*
+                ------------------------------------------------
+                PARSE ROWS
+                ------------------------------------------------
+                */
+
+                csvRows = [];
+
+
+                for (
+                    let i = 1;
+                    i < lines.length;
+                    i++
+                ) {
+
+                    if (
+                        !lines[i].trim()
+                    ) {
+
+                        continue;
+
+                    }
+
+
+                    const values =
+                        parseCSVLine(
+                            lines[i]
+                        );
+
+
+                    const row = {};
+
+
+                    csvHeaders.forEach(
+                        function (
+                            header,
+                            index
+                        ) {
+
+                            row[header] =
+                                values[index] !== undefined
+                                    ? values[index].trim()
+                                    : "";
+
+                        }
+                    );
+
+
+                    row.__componentId =
+                        idIndex !== -1
+                            ? (
+                                values[idIndex] ||
+                                "Component " + i
+                              ).trim()
+                            : "Component " + i;
+
+
+                    csvRows.push(row);
+
+                }
+
+
+                if (
+                    csvRows.length === 0
+                ) {
+
+                    throw new Error(
+                        "No valid component records were found."
+                    );
+
+                }
+
+
+                /*
+                ------------------------------------------------
+                SAVE COMPONENT DATA
+                ------------------------------------------------
+                */
+
+                componentRows =
+                    csvRows;
+
+
+                const uniqueIds =
+                    new Set(
+                        csvRows.map(
+                            row =>
+                                row.__componentId
+                        )
+                    );
+
+
+                const count =
+                    uniqueIds.size;
+
+
+                componentCount.textContent =
+                    count.toLocaleString();
+
+
+                totalComponents.textContent =
+                    count.toLocaleString();
+
+
+                pendingComponents.textContent =
+                    count.toLocaleString();
+
+
+                normalComponents.textContent =
+                    "0";
+
+
+                anomalyComponents.textContent =
+                    "0";
+
+
+                /*
+                ------------------------------------------------
+                READY
+                ------------------------------------------------
+                */
+
+                analyzeButton.disabled =
+                    false;
+
+
+                uploadMessage.textContent =
+                    "CSV validated successfully. " +
+                    count +
+                    " components ready for Module A analysis.";
+
+                uploadMessage.className =
+                    "upload-message success";
+
+
+                console.log(
+                    "CSV headers:",
+                    csvHeaders
+                );
+
+
+                console.log(
+                    "Components:",
+                    csvRows
+                );
+
+            }
+
+
+            catch (error) {
+
+                console.error(
+                    "CSV error:",
+                    error
+                );
+
+
+                componentRows =
+                    [];
+
+
+                analyzeButton.disabled =
+                    true;
+
+
+                componentCount.textContent =
+                    "0";
+
+
+                totalComponents.textContent =
+                    "0";
+
+
+                pendingComponents.textContent =
+                    "0";
+
+
+                uploadMessage.textContent =
+                    error.message;
+
+                uploadMessage.className =
+                    "upload-message error";
+
+            }
+
+        };
+
+
+    reader.onerror =
+        function () {
+
+            uploadMessage.textContent =
+                "Unable to read the CSV file.";
+
+            uploadMessage.className =
+                "upload-message error";
+
+            analyzeButton.disabled =
+                true;
+
+        };
+
+
+    reader.readAsText(file);
+
+}
+
+
+
+/* =====================================================
+   CSV PARSER
+===================================================== */
+
+function parseCSVLine(line) {
+
+    const result = [];
+
+    let current = "";
+
+    let insideQuotes = false;
+
+
+    for (
+        let i = 0;
+        i < line.length;
+        i++
+    ) {
+
+        const character =
+            line[i];
+
+
+        if (
+            character === '"'
+        ) {
+
+            if (
+                insideQuotes &&
+                line[i + 1] === '"'
+            ) {
+
+                current += '"';
+
+                i++;
+
+            }
+
+            else {
+
+                insideQuotes =
+                    !insideQuotes;
+
+            }
+
+        }
+
+        else if (
+            character === "," &&
+            !insideQuotes
+        ) {
+
+            result.push(
+                current
+            );
+
+            current = "";
+
+        }
+
+        else {
+
+            current +=
+                character;
+
+        }
+
+    }
+
+
+    result.push(
+        current
+    );
+
+
+    return result;
+
+}
+
+
+
+/* =====================================================
+   FILE SIZE
+===================================================== */
+
+function formatFileSize(bytes) {
+
+    if (
+        bytes < 1024
+    ) {
+
+        return bytes + " B";
+
+    }
+
+
+    if (
+        bytes < 1024 * 1024
+    ) {
+
+        return (
+            (bytes / 1024)
+                .toFixed(2)
+            + " KB"
+        );
+
+    }
+
+
+    return (
+        (bytes / (1024 * 1024))
+            .toFixed(2)
+        + " MB"
+    );
+
+}
+
+
+
+/* =====================================================
+   ANALYZE DATA
+===================================================== */
+
+analyzeButton.addEventListener(
+    "click",
+    async function () {
+
+        if (
+            componentRows.length === 0
+        ) {
+
+            uploadMessage.textContent =
+                "Please select a valid CSV file first.";
+
+            uploadMessage.className =
+                "upload-message error";
+
+            return;
+
+        }
+
+
+        /*
+        ------------------------------------------------
+        DISABLE BUTTON
+        ------------------------------------------------
+        */
+
+        analyzeButton.disabled =
+            true;
+
+
+        analyzeButton.textContent =
+            "⏳ Analyzing...";
+
+
+        resultStatus.textContent =
+            "Processing";
+
+
+        resultsBody.innerHTML =
+            "";
+
+
+        resultsEmpty.style.display =
+            "none";
+
+
+        resultsTableContainer.style.display =
+            "block";
+
+
+        explanationEmpty.style.display =
+            "flex";
+
+
+        explanationContent.style.display =
+            "none";
+
+
+        normalComponents.textContent =
+            "0";
+
+
+        anomalyComponents.textContent =
+            "0";
+
+
+        pendingComponents.textContent =
+            componentRows.length
+                .toLocaleString();
+
+
+        uploadMessage.textContent =
+            "Sending component data to the VYOMIX ML backend...";
+
+        uploadMessage.className =
+            "upload-message info";
+
+
+        let normalCount = 0;
+
+        let anomalyCount = 0;
+
+        let completedCount = 0;
+
+
+        try {
+
+            const analysisForm = new FormData();
+            analysisForm.append("file", selectedCSVFile);
+
+            const analysisResponse = await fetch(
+                ML_API_URL + "/module-a",
+                {
+                    method: "POST",
+                    body: analysisForm
+                }
+            );
+            const analysisData = await analysisResponse.json();
+
+            if (!analysisResponse.ok || !analysisData.success) {
+                throw new Error(
+                    analysisData.message || "Module A analysis failed."
+                );
+            }
+
+            resultsBody.innerHTML = "";
+            normalCount = analysisData.normal_components || 0;
+            anomalyCount = analysisData.anomaly_components || 0;
+            completedCount = analysisData.total_components || 0;
+
+            (analysisData.results || []).forEach(function (result) {
+                const sourceRow = componentRows.find(function (row) {
+                    return row.__componentId === result.component_id;
+                }) || {};
+                const lotBatch = sourceRow.lot_id ||
+                    sourceRow.lot ||
+                    sourceRow.batch_id ||
+                    sourceRow.batch ||
+                    "-";
+                addResultRow(
+                    result.component_id,
+                    lotBatch,
+                    result.status,
+                    result.score ?? result.anomaly_score,
+                    moduleAExplanation(result)
+                );
+            });
+
+            normalComponents.textContent = normalCount.toLocaleString();
+            anomalyComponents.textContent = anomalyCount.toLocaleString();
+            pendingComponents.textContent = "0";
+            totalComponents.textContent = completedCount.toLocaleString();
+            componentCount.textContent = completedCount.toLocaleString();
+            resultStatus.textContent = "Analysis Complete";
+            uploadMessage.textContent =
+                "Module A analysis completed successfully for " +
+                completedCount + " components.";
+            uploadMessage.className = "upload-message success";
+            explanationText.textContent =
+                `Module A analyzed ${completedCount} components. Select a row to review its actual score against the population threshold. Anomalies are the components whose score meets or exceeds that threshold.`;
+            explanationEmpty.style.display = "none";
+            explanationContent.style.display = "block";
+
+            const activeScreening = window.vyomixStoreModuleA(
+                analysisData,
+                selectedCSVFile.name
+            );
+            uploadMessage.textContent +=
+                " Screening ID: " + activeScreening.screeningId +
+                ". Run Module B with the same dataset to finalize it.";
+
+            return;
+
+            /*
+            ------------------------------------------------
+            PROCESS EVERY COMPONENT
+            ------------------------------------------------
+            */
+
+            for (
+                let i = 0;
+                i < componentRows.length;
+                i++
+            ) {
+
+                const row =
+                    componentRows[i];
+
+
+                const componentId =
+                    row.__componentId ||
+                    "Component " + (i + 1);
+
+
+                /*
+                ------------------------------------------------
+                EXTRACT EXACT 32 VALUES
+                ------------------------------------------------
+                */
+
+                const values =
+                    MODEL_COLUMNS.map(
+                        function (column) {
+
+                            const rawValue =
+                                row[column];
+
+
+                            const numericValue =
+                                Number(rawValue);
+
+
+                            if (
+                                rawValue === "" ||
+                                !Number.isFinite(
+                                    numericValue
+                                )
+                            ) {
+
+                                throw new Error(
+                                    "Invalid numeric value in " +
+                                    column +
+                                    " for component " +
+                                    componentId
+                                );
+
+                            }
+
+
+                            return numericValue;
+
+                        }
+                    );
+
+
+                /*
+                ------------------------------------------------
+                SAFETY CHECK
+                ------------------------------------------------
+                */
+
+                if (
+                    values.length !== 32
+                ) {
+
+                    throw new Error(
+                        "Module A requires exactly 32 values."
+                    );
+
+                }
+
+
+                console.log(
+                    "Sending:",
+                    componentId,
+                    values
+                );
+
+
+                /*
+                ------------------------------------------------
+                CALL FASTAPI
+                ------------------------------------------------
+                */
+
+                const response =
+                    await fetch(
+                        ML_API_URL +
+                        "/module-a/predict",
+                        {
+
+                            method: "POST",
+
+                            headers: {
+
+                                "Content-Type":
+                                    "application/json"
+
+                            },
+
+                            body:
+                                JSON.stringify({
+                                    values: values
+                                })
+
+                        }
+                    );
+
+
+                /*
+                ------------------------------------------------
+                READ RESPONSE
+                ------------------------------------------------
+                */
+
+                const result =
+                    await response.json();
+
+
+                console.log(
+                    "Backend result:",
+                    componentId,
+                    result
+                );
+
+
+                if (
+                    !response.ok
+                ) {
+
+                    throw new Error(
+                        result.detail ||
+                        result.message ||
+                        "ML backend returned an error."
+                    );
+
+                }
+
+
+                if (
+                    result.success === false
+                ) {
+
+                    throw new Error(
+                        result.message ||
+                        "Module A model failed."
+                    );
+
+                }
+
+
+                if (
+                    result.score === undefined ||
+                    result.score === null
+                ) {
+
+                    throw new Error(
+                        "No anomaly score returned for " +
+                        componentId
+                    );
+
+                }
+
+
+                const score =
+                    Number(result.score ?? result.anomaly_score);
+
+
+                /*
+                ------------------------------------------------
+                CLASSIFICATION
+                ------------------------------------------------
+                */
+
+                const isAnomaly =
+                    score >= GMM_THRESHOLD;
+
+
+                const status =
+                    isAnomaly
+                        ? "Review"
+                        : "Normal";
+
+
+                if (
+                    isAnomaly
+                ) {
+
+                    anomalyCount++;
+
+                }
+
+                else {
+
+                    normalCount++;
+
+                }
+
+
+                /*
+                ------------------------------------------------
+                EXPLANATION
+                ------------------------------------------------
+                */
+
+                let explanation;
+
+
+                if (
+                    isAnomaly
+                ) {
+
+                    explanation =
+                        "Dynamic lot-relative anomaly score " +
+                        score.toFixed(2) +
+                        " exceeds the GMM threshold of " +
+                        GMM_THRESHOLD.toFixed(2) +
+                        ". The component deviates from its lot population and requires review.";
+
+                }
+
+                else {
+
+                    explanation =
+                        "Dynamic lot-relative anomaly score " +
+                        score.toFixed(2) +
+                        " is below the GMM threshold of " +
+                        GMM_THRESHOLD.toFixed(2) +
+                        ". Component behavior is within the detected normal lot region.";
+
+                }
+
+
+                /*
+                ------------------------------------------------
+                ADD RESULT ROW
+                ------------------------------------------------
+                */
+
+                addResultRow(
+                    componentId,
+                    "-",
+                    status,
+                    score,
+                    explanation
+                );
+
+
+                /*
+                ------------------------------------------------
+                UPDATE COUNTERS
+                ------------------------------------------------
+                */
+
+                completedCount++;
+
+
+                normalComponents.textContent =
+                    normalCount.toLocaleString();
+
+
+                anomalyComponents.textContent =
+                    anomalyCount.toLocaleString();
+
+
+                pendingComponents.textContent =
+                    (
+                        componentRows.length -
+                        completedCount
+                    ).toLocaleString();
+
+
+                resultStatus.textContent =
+                    "Analyzing " +
+                    completedCount +
+                    " / " +
+                    componentRows.length;
+
+
+                uploadMessage.textContent =
+                    "Analyzing component " +
+                    completedCount +
+                    " of " +
+                    componentRows.length +
+                    "...";
+
+            }
+
+
+            /*
+            ------------------------------------------------
+            ANALYSIS COMPLETE
+            ------------------------------------------------
+            */
+
+            resultStatus.textContent =
+                "Analysis Complete";
+
+
+            uploadMessage.textContent =
+                "Module A analysis completed successfully for " +
+                componentRows.length +
+                " components.";
+
+            uploadMessage.className =
+                "upload-message success";
+
+
+            pendingComponents.textContent =
+                "0";
+
+
+            /*
+            ------------------------------------------------
+            EXPLANATION
+            ------------------------------------------------
+            */
+
+            explanationText.textContent =
+                "Module A analyzed " +
+                componentRows.length +
+                " components using dynamic lot-relative outlier detection. " +
+                "Components with an anomaly score at or above " +
+                GMM_THRESHOLD.toFixed(2) +
+                " were marked for review, regardless of static datasheet limits.";
+
+
+            explanationEmpty.style.display =
+                "none";
+
+
+            explanationContent.style.display =
+                "block";
+
+            const savedUser = JSON.parse(
+                localStorage.getItem("vyomixUser") || "{}"
+            );
+            await fetch(
+                AUTH_API_URL + "/analysis-runs",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        user_email: savedUser.email || "anonymous",
+                        module: "Module A",
+                        total_components: componentRows.length,
+                        normal_count: normalCount,
+                        anomaly_count: anomalyCount,
+                        results: []
+                    })
+                }
+            );
+
+
+        }
+
+
+        catch (error) {
+
+            console.error(
+                "Module A analysis error:",
+                error
+            );
+
+
+            resultStatus.textContent =
+                "Analysis Failed";
+
+
+            uploadMessage.textContent =
+                "Module A error: " +
+                error.message;
+
+            uploadMessage.className =
+                "upload-message error";
+
+
+        }
+
+
+        finally {
+
+            analyzeButton.disabled =
+                false;
+
+
+            analyzeButton.textContent =
+                "🔍 Analyze Data";
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   ADD RESULT ROW
+===================================================== */
+
+function addResultRow(
+    componentId,
+    lotBatch,
+    status,
+    score,
+    explanation
+) {
+
+    const row =
+        document.createElement("tr");
+
+
+    row.innerHTML = `
+
+        <td>
+            ${escapeHTML(componentId)}
+        </td>
+
+        <td>
+            ${escapeHTML(lotBatch || "-")}
+        </td>
+
+        <td>
+            ${escapeHTML(status)}
+        </td>
+
+        <td>
+            ${escapeHTML(
+                Number(score).toFixed(2)
+            )}
+        </td>
+
+        <td>
+            ${escapeHTML(explanation)}
+        </td>
+
+    `;
+
+
+    resultsBody.appendChild(
+        row
+    );
+
+}
+
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(value) {
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+if (logoutButton) {
+
+    logoutButton.addEventListener(
+        "click",
+        function () {
+
+            localStorage.removeItem(
+                "vyomixUser"
+            );
+
+
+            localStorage.removeItem(
+                "vyomixEmail"
+            );
+
+
+            window.location.href =
+                "index.html";
+
+        }
+    );
+
+}
+
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX SCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

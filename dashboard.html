@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VYOMIX | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="sidebar-brand">
+
+        <div class="brand-symbol">
+            🚀
+        </div>
+
+        <div>
+
+            <h2>VYOMIX</h2>
+
+            <span>
+                COMPONENT INTELLIGENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-nav">
+
+
+        <!-- DASHBOARD -->
+
+        <a href="dashboard.html"
+           class="nav-item active">
+
+            <span>▦</span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+
+        <!-- NEW SCREENING -->
+
+        <a href="screening.html"
+           class="nav-item">
+
+            <span>＋</span>
+
+            <span>
+                New Screening
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE A -->
+
+        <a href="module-a.html"
+           class="nav-item">
+
+            <span>◉</span>
+
+            <span>
+                Module A
+            </span>
+
+        </a>
+
+
+
+        <!-- MODULE B -->
+
+        <a href="module-b.html"
+           class="nav-item">
+
+            <span>◇</span>
+
+            <span>
+                Module B
+            </span>
+
+        </a>
+
+
+
+        <!-- HISTORY -->
+
+        <a href="history.html"
+           class="nav-item">
+
+            <span>◷</span>
+
+            <span>
+                History
+            </span>
+
+        </a>
+
+
+
+        <!-- REPORTS -->
+
+        <a href="reports.html"
+           class="nav-item">
+
+            <span>▤</span>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+
+        <!-- SETTINGS -->
+
+        <a href="settings.html"
+           class="nav-item">
+
+            <span>⚙</span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- SIDEBAR BOTTOM -->
+
+    <div class="sidebar-bottom">
+
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button">
+
+            <span>↪</span>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================= -->
+
+    <header class="topbar">
+
+
+        <!-- PAGE TITLE -->
+
+        <div>
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <p>
+                Component Screening Workspace
+            </p>
+
+        </div>
+
+
+
+        <!-- USER PROFILE -->
+
+        <div class="topbar-right">
+
+
+            <div class="user-profile">
+
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar">
+
+                    U
+
+                </div>
+
+
+                <div class="user-details">
+
+
+                    <strong id="userName">
+
+                        User
+
+                    </strong>
+
+
+                    <span id="userRole">
+
+                        Engineer
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         DASHBOARD CONTENT
+    ================================================= -->
+
+    <section class="dashboard-content">
+
+
+
+        <!-- =================================================
+             WELCOME SECTION
+        ================================================= -->
+
+        <section class="welcome-section">
+
+
+            <div class="welcome-text">
+
+
+                <p class="welcome-label">
+
+                    COMPONENT SCREENING WORKSPACE
+
+                </p>
+
+
+                <h2>
+
+                    Welcome back,
+                    <span id="welcomeName">
+                        User
+                    </span>
+
+                </h2>
+
+
+                <p class="welcome-description">
+
+                    Monitor component screening and
+                    burn-in analysis from your workspace.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- NEW SCREENING -->
+
+            <a
+                href="screening.html"
+                class="new-screening-button">
+
+                + NEW SCREENING
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUMMARY CARDS
+        ================================================= -->
+
+        <section class="stats-grid">
+
+
+
+            <!-- TOTAL SCREENED -->
+
+            <div class="stat-card dashboard-filter-card" data-filter="total" role="button" tabindex="0">
+
+
+                <div class="stat-icon">
+
+                    ◉
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Total Screened
+
+                    </span>
+
+
+                    <h2 id="totalScreened">
+
+                        0
+
+                    </h2>
+
+
+                    <small>
+
+                        Completed screenings
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- NORMAL -->
+
+            <div class="stat-card dashboard-filter-card" data-filter="accepted" role="button" tabindex="0">
+
+
+                <div class="stat-icon normal">
+
+                    ✓
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Accepted / PASS
+
+                    </span>
+
+
+                    <h2 id="normalCount">
+
+                        0
+
+                    </h2>
+
+
+                    <small>
+
+                        Final accepted decisions
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- MODULE A ANOMALIES -->
+
+            <div class="stat-card dashboard-filter-card" data-filter="module_a_anomalies" role="button" tabindex="0">
+
+
+                <div class="stat-icon anomaly">
+
+                    !
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Module A Anomalies
+
+                    </span>
+
+
+                    <h2 id="moduleAAnomalyCount">
+
+                        0
+
+                    </h2>
+
+
+                    <small>
+
+                        Detected lot outliers
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- MODULE B AT-RISK -->
+
+            <div class="stat-card dashboard-filter-card" data-filter="module_b_at_risk" role="button" tabindex="0">
+
+
+                <div class="stat-icon pending">
+
+                    ◷
+
+                </div>
+
+
+                <div class="stat-info">
+
+
+                    <span class="stat-label">
+
+                        Module B At-Risk
+
+                    </span>
+
+
+                    <h2 id="moduleBAtRiskCount">
+
+                        0
+
+                    </h2>
+
+
+                    <small>
+
+                        Predicted high-risk components
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="stat-card dashboard-filter-card" data-filter="review" role="button" tabindex="0">
+                <div class="stat-icon pending">?</div>
+                <div class="stat-info">
+                    <span class="stat-label">Requiring Review</span>
+                    <h2 id="reviewCount">0</h2>
+                    <small>Components needing attention</small>
+                </div>
+            </div>
+
+            <div class="stat-card dashboard-filter-card" data-filter="rejected" role="button" tabindex="0">
+                <div class="stat-icon anomaly">!</div>
+                <div class="stat-info">
+                    <span class="stat-label">Rejected / FAIL</span>
+                    <h2 id="failedCount">0</h2>
+                    <small>Final rejected decisions</small>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="content-card" id="dashboardComponentList" style="display: none;">
+            <div class="section-header">
+                <div>
+                    <h3 id="dashboardComponentListTitle">Components</h3>
+                    <p id="dashboardComponentListSummary"></p>
+                </div>
+                <button type="button" class="report-action" id="dashboardComponentListClose">Close</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SCREENING ID</th>
+                            <th>COMPONENT ID</th>
+                            <th>LOT / BATCH</th>
+                            <th>STATUS</th>
+                            <th>MODULE A SCORE</th>
+                            <th>MODULE B 168H</th>
+                            <th>DRIFT</th>
+                            <th>REASON</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dashboardComponentListBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+        <!-- =================================================
+             SCREENING STATUS
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        Screening Status
+
+                    </h3>
+
+
+                    <p>
+
+                        Current component screening overview
+
+                    </p>
+
+                </div>
+
+
+                <span>
+
+                    Ready
+
+                </span>
+
+
+            </div>
+
+
+
+            <div class="empty-state">
+
+
+                <div class="empty-icon">
+
+                    ◷
+
+                </div>
+
+
+                <h4>
+
+                    <span id="latestScreeningTitle">No screening data yet</span>
+
+                </h4>
+
+
+                <p>
+
+                    <span id="latestScreeningDescription">Start a new screening to analyze your component burn-in data.</span>
+
+                </p>
+
+
+                <a
+                    href="screening.html"
+                    class="empty-action-button">
+
+                    Start New Screening
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYSIS MODULES
+        ================================================= -->
+
+        <section class="content-card">
+            <div class="section-header">
+                <div>
+                    <h3>How VYOMIX Analyzes Components</h3>
+                    <p>Module A and Module B answer different engineering questions.</p>
+                </div>
+                <span>Analysis Guide</span>
+            </div>
+            <div class="module-metrics">
+                <div>
+                    <span>MODULE A</span>
+                    <strong>Dynamic Anomaly Detection</strong>
+                    <p>Checks whether a component behaves abnormally compared with its lot population using the burn-in measurements. A component is flagged when its anomaly score reaches the existing population threshold.</p>
+                </div>
+                <div>
+                    <span>MODULE B</span>
+                    <strong>168h Drift Prediction</strong>
+                    <p>Uses early burn-in measurements to forecast future 168-hour behaviour and identify components with increasing drift or predicted risk.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- =================================================
+             SYSTEM INFORMATION
+        ================================================= -->
+
+        <section class="content-card">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h3>
+
+                        System Information
+
+                    </h3>
+
+
+                    <p>
+
+                        VYOMIX screening environment
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="module-metrics">
+
+
+                <!-- DATA SOURCE -->
+
+                <div>
+
+
+                    <span>
+
+                        DATA SOURCE
+
+                    </span>
+
+
+                    <strong>
+
+                        Burn-In Screening Data
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- SCREENING -->
+
+                <div>
+
+
+                    <span>
+
+                        SCREENING
+
+                    </span>
+
+
+                    <strong>
+
+                        AI-Driven Component Analysis
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div>
+
+
+                    <span>
+
+                        SYSTEM STATUS
+
+                    </span>
+
+
+                    <strong class="model-ready">
+
+                        ● System Ready
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <footer>
+
+
+        <span>
+
+            © 2026 VYOMIX — Component Intelligence
+
+        </span>
+
+
+        <span>
+
+            AI-Driven Burn-In &amp; Screening System
+
+        </span>
+
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     DASHBOARD JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   DASHBOARD VALUES
+===================================================== */
+
+/*
+    All values intentionally start at ZERO.
+
+    Later, these values can be loaded from
+    the completed screening history/backend.
+*/
+
+const dashboardData = {
+
+    totalScreened: 0,
+
+    normal: 0,
+
+    moduleAAnomalies: 0,
+
+    moduleBAtRisk: 0,
+
+    review: 0,
+
+    failed: 0
+};
+
+let dashboardComponentLists = {};
+const dashboardFilterLabels = {
+    total: "Total Screened",
+    accepted: "Accepted / PASS",
+    module_a_anomalies: "Module A Anomalies",
+    module_b_at_risk: "Module B At-Risk",
+    review: "Requiring Review",
+    rejected: "Rejected / FAIL"
+};
+
+
+
+/* =====================================================
+   UPDATE DASHBOARD
+===================================================== */
+
+function updateDashboard() {
+
+
+    const totalScreened =
+        document.getElementById(
+            "totalScreened"
+        );
+
+
+    const normalCount =
+        document.getElementById(
+            "normalCount"
+        );
+
+
+    const moduleAAnomalyCount = document.getElementById("moduleAAnomalyCount");
+    const moduleBAtRiskCount = document.getElementById("moduleBAtRiskCount");
+    const reviewCount = document.getElementById("reviewCount");
+    const failedCount = document.getElementById("failedCount");
+
+
+    if (totalScreened) {
+
+        totalScreened.textContent =
+            dashboardData.totalScreened;
+
+    }
+
+
+    if (normalCount) {
+
+        normalCount.textContent =
+            dashboardData.normal;
+
+    }
+
+
+    if (moduleAAnomalyCount) moduleAAnomalyCount.textContent = dashboardData.moduleAAnomalies;
+    if (moduleBAtRiskCount) moduleBAtRiskCount.textContent = dashboardData.moduleBAtRisk;
+    if (reviewCount) reviewCount.textContent = dashboardData.review;
+    if (failedCount) failedCount.textContent = dashboardData.failed;
+
+}
+
+function renderDashboardComponentList(filter) {
+    const panel = document.getElementById("dashboardComponentList");
+    const title = document.getElementById("dashboardComponentListTitle");
+    const summary = document.getElementById("dashboardComponentListSummary");
+    const body = document.getElementById("dashboardComponentListBody");
+    const components = dashboardComponentLists[filter] || [];
+
+    title.textContent = dashboardFilterLabels[filter] || "Components";
+    summary.textContent = `${components.length} saved component result${components.length === 1 ? "" : "s"}`;
+    body.innerHTML = "";
+
+    components.forEach(function (component) {
+        const row = document.createElement("tr");
+        [
+            component.screening_id,
+            component.component_id,
+            component.lot_batch || "-",
+            component.status || component.module_b_risk || "-",
+            component.module_a_score ?? "-",
+            component.module_b_prediction ?? "-",
+            component.module_b_drift ?? "-",
+            component.reason || "-"
+        ].forEach(function (value, index) {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            if (index === 3) {
+                const normalized = String(value).toLowerCase();
+                cell.innerHTML = "";
+                const badge = document.createElement("span");
+                badge.className = "status-badge " + (
+                    normalized.includes("reject") ? "rejected" :
+                        normalized.includes("review") ? "review" : "accepted"
+                );
+                badge.textContent = value;
+                cell.appendChild(badge);
+            }
+            row.appendChild(cell);
+        });
+        body.appendChild(row);
+    });
+
+    panel.style.display = "block";
+    panel.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.querySelectorAll(".dashboard-filter-card").forEach(function (card) {
+    const openList = function () {
+        renderDashboardComponentList(card.dataset.filter);
+    };
+    card.addEventListener("click", openList);
+    card.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openList();
+        }
+    });
+});
+
+document.getElementById("dashboardComponentListClose")?.addEventListener("click", function () {
+    document.getElementById("dashboardComponentList").style.display = "none";
+});
+
+
+
+/* =====================================================
+   USER INFORMATION
+===================================================== */
+
+/*
+    The common script.js also loads the user.
+    This block additionally fills the dashboard
+    welcome message and avatar.
+*/
+
+const storedUser =
+    localStorage.getItem(
+        "vyomixUser"
+    );
+
+
+if (storedUser) {
+
+
+    try {
+
+
+        const user =
+            JSON.parse(
+                storedUser
+            );
+
+
+        const name =
+            user.name ||
+            "User";
+
+
+        const role =
+            user.role ||
+            "Engineer";
+
+
+
+        /* USER NAME */
+
+        const userName =
+            document.getElementById(
+                "userName"
+            );
+
+
+        if (userName) {
+
+            userName.textContent =
+                name;
+
+        }
+
+
+
+        /* USER ROLE */
+
+        const userRole =
+            document.getElementById(
+                "userRole"
+            );
+
+
+        if (userRole) {
+
+            userRole.textContent =
+                role;
+
+        }
+
+
+
+        /* WELCOME NAME */
+
+        const welcomeName =
+            document.getElementById(
+                "welcomeName"
+            );
+
+
+        if (welcomeName) {
+
+            welcomeName.textContent =
+                name;
+
+        }
+
+
+
+        /* AVATAR INITIAL */
+
+        const userAvatar =
+            document.getElementById(
+                "userAvatar"
+            );
+
+
+        if (
+            userAvatar &&
+            name.length > 0
+        ) {
+
+            userAvatar.textContent =
+                name
+                    .charAt(0)
+                    .toUpperCase();
+
+        }
+
+
+    }
+
+    catch (error) {
+
+
+        console.error(
+            "Unable to load user information.",
+            error
+        );
+
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+if (logoutButton) {
+
+
+    logoutButton.addEventListener(
+        "click",
+        function () {
+
+
+            localStorage.removeItem(
+                "vyomixUser"
+            );
+
+
+            localStorage.removeItem(
+                "vyomixEmail"
+            );
+
+
+            window.location.href =
+                "index.html";
+
+
+        }
+    );
+
+
+}
+
+
+
+/* =====================================================
+   START DASHBOARD
+===================================================== */
+
+updateDashboard();
+
+const dashboardUser = JSON.parse(
+    localStorage.getItem("vyomixUser") || "{}"
+);
+fetch(
+    "http://127.0.0.1:8000/screenings/summary?user_email=" +
+    encodeURIComponent(dashboardUser.email || "anonymous")
+)
+    .then(response => response.json())
+    .then(summary => {
+        if (!summary.success) {
+            return;
+        }
+
+        dashboardData.totalScreened = summary.total_components;
+        dashboardData.normal = summary.pass_count;
+        dashboardData.moduleAAnomalies = summary.module_a_anomaly_count;
+        dashboardData.moduleBAtRisk = summary.module_b_at_risk_count;
+        dashboardData.review = summary.review_count;
+        dashboardData.failed = summary.failed_count;
+        dashboardComponentLists = summary.component_lists || {};
+        updateDashboard();
+
+        const latest = summary.latest_screening;
+        if (!latest) {
+            return;
+        }
+
+        document.getElementById("latestScreeningTitle").textContent =
+            latest.screeningId + " • " + latest.status;
+        document.getElementById("latestScreeningDescription").textContent =
+            `${latest.components} components • ${latest.moduleAAnomalies} Module A anomalies • ` +
+            `${latest.moduleBAtRisk} Module B at-risk • ${latest.date}`;
+    })
+    .catch(error => console.error("Unable to load dashboard data:", error));
+
+
+</script>
+
+
+
+<!-- =====================================================
+     COMMON VYOMIX JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

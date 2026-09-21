@@ -1,0 +1,27 @@
+{
+  "appId": "com.vyomix.desktop",
+  "productName": "VYOMIX",
+  "directories": {
+    "output": "dist"
+  },
+  "asar": false,
+  "extraResources": [
+    {
+      "from": ".venv",
+      "to": ".venv"
+    }
+  ],
+  "files": [
+    "**/*",
+    "!**/*.map",
+    "!**/.git/**",
+    "!**/.vscode/**",
+    "!**/.venv/**",
+    "!dist/**"
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "icon.ico",
+    "signAndEditExecutable": false
+  }
+}
